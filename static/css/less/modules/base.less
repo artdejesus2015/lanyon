@@ -1,0 +1,77 @@
+// ==================================================================================
+// Base
+// ==================================================================================
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 17px;
+  font-family: @ProximaLight;
+  line-height: 1.8;
+  color: #333333;
+}
+
+p {
+  margin-bottom: 1em;
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  font-family: ProximaNovaBold;
+  .transition(all ease-in-out .3s);
+
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+// tags
+h1 {
+ font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 13px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+// List
+ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+
+    a {
+      display: block;
+    }
+  }
+}

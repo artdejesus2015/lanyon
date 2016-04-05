@@ -1,0 +1,143 @@
+// ==================================================================================
+// Carousel
+// ==================================================================================
+
+.join-wrap {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  margin-bottom: 6em;
+  margin-top: -15em;
+  .box-shadow(0 0 3px 0 #eeeff0);
+
+
+
+  .item {
+    overflow: hidden;
+  }
+
+  .item-img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 450px;
+    width: 65%;
+    float: left;
+
+  }
+
+  .item-caption {
+    width: 35%;
+    float: left;
+    height: 450px;
+    background-color: #00c4b3;
+    position: relative;
+    z-index: 1;
+    padding: 50px 15px 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -50px;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100px;
+      background-color: #00c4b3;
+      transform: skew(-10deg);
+      z-index: -1;
+      -webkit-backface-visibility: hidden;
+      -webkit-background-clip: content-box;
+    }
+
+    .qoute-img {
+      margin-bottom: 2.5em;
+    }
+
+    .description {
+      max-width: 350px;
+      min-width: 350px;
+
+      p {
+        font-size: 18px;
+        text-align: left;
+      }
+    }
+
+    .author-name, .author-title {
+      text-align: left;
+    }
+
+    .author-name {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    .author-title {
+      font-size: 12px;
+      color: #fff;
+      font-family: @ProximaBold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.carousel-gallery {
+  .item {
+    ul {
+      display: block;
+      overflow: hidden;
+
+      li {
+        width: 20%;
+        float: left;
+
+        a {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background-color: #1bd0eb;
+          display: block;
+          position: relative;
+
+          &:hover {
+            img {
+              .opacity(0.6);
+            }
+          }
+          
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-control {
+    background-color: #000;
+    background-image: none;
+    text-shadow: none;
+    width: 100px;
+    height: 140px;
+    top: 50%;
+    bottom: auto;
+    .translate(0, -50%);
+    color: #fff;
+    font-size: 50px;
+
+    .glyphicon {
+      font-size: 70px;
+      margin-top: -38px;
+    }
+
+    .icon-angle-left {
+      margin-left: -15px;
+    }
+
+    .icon-angle-right {
+      margin-right: -15px;
+    }
+  }
+}

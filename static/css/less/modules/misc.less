@@ -1,0 +1,476 @@
+// ==================================================================================
+// Miscellaneous Styles
+// ==================================================================================
+
+.circle-wrap {
+  position: relative;
+  margin: 8em 0 3em;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.big-circle {
+  background-color: #00c4b3;
+  background-color: rgba(0,196,179,0.7);
+  height: 300px;
+  width: 300px;
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  border-radius: 300px;
+  margin: 5em auto;
+  position: relative;
+  z-index: 1;
+
+  -moz-animation-name: big-circle-jump;
+  -webkit-animation-name: big-circle-jump;
+  animation-name: big-circle-jump;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+
+  p {
+    font-family: @ProximaBold;
+    font-size: 80px;
+    color: #fff;
+    line-height: 1.2;
+    position: absolute;
+    padding: 15px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    .translate(0, -50%);
+
+    span {
+      font-family: @ProximaSbold;
+      font-size: 18px;
+      display: block;
+    }
+  }
+}
+
+.circle-icon {
+  border-radius: 140px;
+  position: absolute;
+
+  -moz-animation-name: big-circle-jump;
+  -webkit-animation-name: big-circle-jump;
+  animation-name: big-circle-jump;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.circle-xsmall {
+  height: 14px;
+  width: 14px;
+
+  -moz-animation-duration: 3.5s;
+  -webkit-animation-duration: 3.5s;
+  animation-duration: 3.5s;
+}
+
+.circle-small {
+  height: 20px;
+  width: 20px;
+  -moz-animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+.circle-medium {
+  height: 32px;
+  width: 32px;
+  -moz-animation-duration: 4.5s;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+}
+
+.circle-large {
+  height: 46px;
+  width: 46px;
+  -moz-animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+.circle-xlarge {
+  height: 144px;
+  width: 144px;
+  -moz-animation-duration: 5.5s;
+  -webkit-animation-duration: 5.5s;
+  animation-duration: 5.5s;
+}
+
+.circle-bordered {
+  border: 3px solid #d9e5ee;
+}
+
+.circle-bordered-thick {
+  border: 4px solid #d9e5ee;
+}
+
+.circle-bordered-gray {
+  border-color: #d9e5ee;
+}
+
+.circle-bordered-blue {
+  border-color: #0070ce;
+}
+
+.circle-bordered-orange {
+  border-color: #ff5b35;
+}
+
+.circle-icon-green {
+  background-color: #53f3e5;
+}
+
+.circle-bordered-gray1 {
+  top: -12%;
+  right: 45%;
+}
+
+.circle-bordered-gray2 {
+  top: 40%;
+  right: 28%;
+}
+
+.circle-bordered-gray3 {
+  bottom: 28%;
+  left: 33%;
+}
+
+.circle-bordered-gray4 {
+  bottom: 28%;
+  left: 23%;
+}
+
+.circle-bordered-gray5 {
+  top: -5%;
+  right: 20%;
+
+}
+
+.circle-bordered-gray6 {
+  top: 44%;
+  right: 15%;
+}
+
+.circle-bordered-gray7 {
+  bottom: 30%;
+  right: 33%;
+}
+
+.circle-bordered-gray8 {
+  top: 0%;
+  left: 38%;
+}
+
+.circle-bordered-gray9 {
+  top: 20%;
+  left: 20%;
+}
+
+.circle-bordered-blue1 {
+  top: 5%;
+  left: 32%;
+}
+
+.circle-bordered-blue2 {
+  bottom: 20%;
+  right: 20%;
+}
+
+.circle-bordered-orange1 {
+  bottom: 48%;
+  left: 25%;
+}
+
+.circle-icon-green1  {
+  top: -8%;
+  right: 30%;
+}
+
+.circle-white {
+  height: 200px;
+  width: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  background-color: #fff;
+  margin: -100px auto 0;
+  padding: 110px 15px 0;
+
+
+  p {
+    font-family: @ProximaBold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #010f1d;
+  }
+}
+
+.circle-black {
+  height: 200px;
+  width: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  background-color: #003366;
+  padding: 75px 15px;
+  //.box-shadow(1px 1px 1px 20px rgba(0,51,102,0.1));
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  -moz-animation-name: Glow;
+  -webkit-animation-name: Glow;
+  animation-name: Glow;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+
+  &:before {
+    content: '';
+    position: absolute;
+    .size(120%, 120%);
+    top: -20px;
+    left: -20px;
+    border-radius: 200px;
+    -moz-animation-name: Glow-drop;
+    -webkit-animation-name: Glow-drop;
+    animation-name: Glow-drop;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  p {
+    font-family: @ProximaBold;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .small-letters {
+    font-size: 14px;
+    color: #00c4b3;
+    letter-spacing: 2px;
+  }
+
+}
+
+.big-circle-blue {
+  background-color: #0070ce;
+}
+
+.big-circle-orange {
+  background-color: #ff5b35;
+}
+
+.diamond-wrap {
+  text-align: center;
+  padding: 2em 0 4em;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.diamond-spark {
+  position: absolute;
+  -moz-animation-name: grow-star;
+  -webkit-animation-name:grow-star;
+  animation-name: grow-star;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.diamond-spark1 {
+  top: -15%;
+  right: 43%;
+}
+
+.diamond-spark2 {
+  top: 10%;
+  right: 30%;
+
+}
+
+.diamond-spark3 {
+  bottom: 40%;
+  right: 35%;
+}
+
+.diamond-spark4 {
+  bottom: 44%;
+  left: 35%;
+}
+
+.diamond-spark5 {
+  top: 5%;
+  left: 35%;
+}
+
+.circle-bg {
+  background-color: #e8eef1;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+
+  .travel-airplane {
+    background: url(../images/travel-airplane.png);
+    width: 212px;
+    height: 111px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-repeat: no-repeat;
+    zoom: 90%;
+    -webkit-animation: airplane 3s ease-in-out infinite;
+    -moz-animation: airplane 3s ease-in-out infinite;
+    -o-animation: airplane 3s ease-in-out infinite;
+    animation: airplane 3s ease-in-out infinite;
+  }
+}
+.circle-number {
+  font-family: @ProximaBold;
+  font-size: 30px;
+  color: #fff;
+  background-color: #0070ce;
+  height: 76px;
+  width: 76px;
+  -webkit-border-radius: 76px;
+  -moz-border-radius: 76px;
+  border-radius: 76px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.panel-frequently {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 2em;
+
+  .panel-default {
+    text-align: left;
+    border-color: #0070ce;
+
+    + .panel {
+      margin-top: 15px;
+    }
+
+    .panel-heading {
+      padding: 0;
+
+      .panel-title {
+        a {
+          display: block;
+          padding: 30px 40px;
+          text-decoration: none !important;
+          font-size: 18px;
+          font-family: @ProximaSbold;
+          color: #fff;
+          background-color: #0070ce;
+          position: relative;
+
+          &:before {
+            content: "\e904";
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            font-size: 40px;
+            .transition(all ease-in-out .3s);
+          }
+
+          &.collapsed {
+            &:before {
+              content: "\e902";
+            }
+          }
+        }
+
+      }
+    }
+
+    .panel-body {
+      background-color: #0070ce;
+      border-color:  #0070ce!important;
+      padding: 15px 40px 30px;
+
+      p {
+        font-size: 16px;
+        color: #fff;
+        border-color: #0070ce !important;
+
+        a {
+          color: #00C4B3;
+        }
+      }
+    }
+  }
+}
+
+.diamond1 {
+  -moz-animation-name: Floatingx;
+  -webkit-animation-name: Floatingx;
+  animation-name: Floatingx;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function:
+  ease-in-out;
+  animation-timing-function:
+  ease-in-out;
+}
+

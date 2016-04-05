@@ -1,0 +1,122 @@
+// ==================================================================================
+// Buttons
+// ==================================================================================
+
+.btn {
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: #0070ce;
+  font-family: @ProximaBold;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  overflow: hidden;
+  .transition(color 0.3s);
+  position: relative;
+  z-index: 1;
+  border: none;
+
+  &:hover, &:focus {
+    color: #fff;
+    background-color: #0070ce;
+
+    &:before, &:after {
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+
+    &:after {
+      -webkit-transition-delay: 0.175s;
+      transition-delay: 0.175s;
+    }
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  }
+
+  &:before {
+    background-color: #197ed2;
+  }
+
+  &:after {
+    background-color: #328cd7;
+  }
+}
+
+.btn-mw {
+  min-width: 250px;
+}
+
+.btn-bordered {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.btn-register {
+  text-transform: uppercase;
+  color: #00514a;
+  line-height: 1;
+  padding: 60px 70px;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/button-register-back.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/button-register.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+  }
+
+
+  .btn-bold {
+   font-size: 38px;
+   display: block;
+ }
+
+}
+
+.btn-holder {
+  p {
+    font-size: 16px;
+  }
+}
+
+.btn-green {
+  background-color: #00c4b3;
+  margin-right: 1em;
+}
