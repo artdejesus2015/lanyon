@@ -37,9 +37,9 @@
         <?php
 
         $defaults = array(
-            'theme_location'  => 'primary',
-            'menu'            => 'Main Menu',
-            'menu_class'      => 'nav navbar-nav'
+                'theme_location'  => 'primary',
+                'menu'            => 'Main Menu',
+                'menu_class'      => 'nav navbar-nav'
         );
         wp_nav_menu( $defaults );
 
@@ -58,7 +58,7 @@
                 <button type="button" class="navbar-menu-toggle">
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"></a>
+                <a class="navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,9 +66,9 @@
                 <?php
 
                 $defaults = array(
-                    'theme_location'  => 'primary',
-                    'menu'            => 'Main Menu',
-                    'menu_class'      => 'nav navbar-nav'
+                        'theme_location'  => 'primary',
+                        'menu'            => 'Main Menu',
+                        'menu_class'      => 'nav navbar-nav'
                 );
                 wp_nav_menu( $defaults );
 

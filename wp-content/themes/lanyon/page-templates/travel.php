@@ -50,7 +50,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                                 <?php the_field('travel_description_1'); ?>
                             </div>
 
-                            <a href="https://aws.passkey.com/event/14677675/owner/865/home" class="btn btn-primary">Book Now</a>
+                            <a href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=14677675" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                     <div class="travel-grid-item">

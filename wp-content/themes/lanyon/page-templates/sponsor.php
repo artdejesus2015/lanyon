@@ -34,18 +34,20 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark4">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark5">
                 </div>
-                <h2 class="title section-title"><?php the_field('content_title');?></h2>
+                <div class="animatedParent animateOnce">
+                    <h2 class="title section-title animated fadeInDownShort"><?php the_field('content_title');?></h2>
 
-                <div class="description">
-                    <p><?php the_field('content_description'); ?></p>
+                    <div class="description animated fadeIn delay-250">
+                        <p><?php the_field('content_description'); ?></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="text-center section-join section-sponsors-logo" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/sponsor-bg.png');">
-            <div class="logo-wrap sponsors-logo-wrap">
+        <div class="text-center section-join section-sponsors-logo animatedParent animateOnce" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/sponsor-bg.png');">
+            <div class="logo-wrap sponsors-logo-wrap animated fadeInUpShort delay-500">
                 <ul class="logo-list">
                     <li>
                         <?php while (have_rows('diamond_logo')): the_row(); ?>

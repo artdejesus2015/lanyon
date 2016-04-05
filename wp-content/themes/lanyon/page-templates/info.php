@@ -71,287 +71,33 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
                 <div class="frequently-wrap">
                     <div class="panel-group panel-frequently" id="accordion" role="tablist" aria-multiselectable="true">
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading1">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                        Who’s Lanyon?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
-                                <div class="panel-body">
-                                    <p>Lanyon believes that when people get together amazing things can happen. Relationships are built and business gets done. We’ve created the industry's leading cloud-based software for managing corporate meetings, events and travel programs, so that we can help you do what you do best. Only better. </p>
-
+                        <?php
+                        query_posts(array(
+                                'post_type' => 'faqs',
+                                'posts_per_page' => 20,
+                                'order'        => ASC,
+                        ));
+                        if ( have_posts() ) : ?>
+                            <?php $cntr = 0; while(have_posts()) : the_post(); ?>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="heading<?php echo $cntr; ?>">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $cntr; ?>" aria-expanded="true" aria-controls="collapse<?php echo $cntr; ?>">
+                                                <?php the_title(); ?>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse<?php echo $cntr; ?>" class="panel-collapse collapse <?php echo ($cntr == 0) ? 'in' : '' ?>" role="tabpanel" aria-labelledby="heading<?php echo $cntr; ?>">
+                                        <div class="panel-body">
+                                            <?php the_content(); ?>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                                <?php $cntr++; endwhile; wp_reset_query(); ?>
+                        <?php endif; ?>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading2">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                        What is Lanyon Live 2016?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-                                <div class="panel-body">
-                                    <p>Lanyon Live brings together leaders and decision-makers from across the meetings, events, travel and hotel industries. For two and a half days, attendees network with global peers and hear from industry experts in sessions focused on thought leadership and best practices.</p>
 
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading3">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                        Where is Lanyon Live 2016?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-                                <div class="panel-body">
-                                    <p>Renaissance Dallas Hotel <br>
-                                        Dallas, Texas </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading4">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                        When is Lanyon Live 2016?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
-                                <div class="panel-body">
-                                    <p>Tuesday, October 25 through Thursday, October 27</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading5">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                        I want to go to Lanyon Live 2016. How much does it cost?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
-                                <div class="panel-body">
-                                    <p>Regular Price: $499 <br>
-                                        Late: $599<br>
-                                        Onsite: $699</p>
-
-                                    <p> Please refer to your invitation for any special offers. If you have questions, please contact your Lanyon representative.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading6">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                        That’s a great price! What’s included with my ticket?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
-                                <div class="panel-body">
-                                    <p>Admission to all keynote, general and breakout sessions, access to the expanded [Lanyon Tech Pavilion], invitations to evening events and celebrations Tuesday and Wednesday night, conference meals — breakfast and lunch — Wednesday and Thursday.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading7">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                        Why should I attend Lanyon Live 2016?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
-                                <div class="panel-body">
-                                    <p>At Lanyon Live, you’ll connect with leaders and decision-makers from across the meetings, events, travel and hotel industries. You’ll make lasting connections with global peers and learn from industry experts in sessions focused on thought leadership and best practices.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading8">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                                        What’s the recommended attire for the conference?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
-                                <div class="panel-body">
-                                    <p>Business casual. </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading9">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                                        What’s the weather like in Dallas in October?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
-                                <div class="panel-body">
-                                    <p>Dallas weather is notoriously unpredictable, but fall temperatures typically vary from 56°F to 72°F. We’re looking forward to beautiful weather – though you should pack an umbrella just in case.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading10">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                                        Who from my organization should attend the conference?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
-                                <div class="panel-body">
-                                    <p>Whether you’re a meetings or event planner, a procurement specialist, a travel manager or a hotelier, you’re sure to find something of value at Lanyon Live 2016. In this industry, we succeed when we all work together — so let’s connect!</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading11">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                                        How do I get from the airport to the Renaissance Dallas Hotel?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
-                                <div class="panel-body">
-                                    <p>From Dallas Love Field, there are a number of transportation options to get you to the Renaissance Dallas Hotel, including taxi, car rental and limousine services. Average cab fares range from $20 - $30.</p>
-
-                                    <p>From DFW International, cabs are easily available and charge around $50 to get to the hotel. A number of shuttle services are also available.</p>
-
-                                    <p>Another option? Dallas airports (Both DFW and Dallas Love) accommodate rideshare services – Lyft or Uber – so you can get curbside pickup.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading12">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                        How do I book my hotel reservation, and what’s the cost?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
-                                <div class="panel-body">
-                                    <p> Upon completing your registration, you’ll be directed to book your hotel within our room block using Lanyon Passkey. Lanyon has a negotiated room rate of $229.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading13">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                                        Do I need to pre-register for sessions?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
-                                <div class="panel-body">
-                                    <p>We’ll notify you as soon as session registration is available. Stay tuned!</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading14">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" aria-controls="collapse14">
-                                        I have dietary restrictions. Can you accommodate me?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading14">
-                                <div class="panel-body">
-                                    <p>Absolutely! Just let us know about your dietary restrictions during the registration process, and we’ll take it from there.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading15">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" aria-controls="collapse15">
-                                        Can I transfer my ticket to someone else?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
-                                <div class="panel-body">
-                                    <p>Yes! You may transfer your ticket to another representative from your company. As the current registrant, please email us, and we’ll help you make the transfer.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading16">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="false" aria-controls="collapse16">
-                                        Can I get a refund on my ticket?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading16">
-                                <div class="panel-body">
-                                    <p>No, tickets are nonrefundable but can be transferred to another representative from your company.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="heading17">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse17" aria-expanded="false" aria-controls="collapse17">
-                                        Can I apply to be a speaker? Or suggest someone as a speaker?
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading17">
-                                <div class="panel-body">
-                                    <p>Please <a href="mailto:lanyonlive@lanyon.com">email us</a> if you have interest in speaking at Lanyon Live or would like to suggest someone to speak.</p>
-
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
