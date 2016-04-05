@@ -42,3 +42,31 @@ function special_nav_class($classes, $item){
     }
     return $classes;
 }
+
+function my_custom_post_faqs() {
+    $labels = array(
+            'name'               => _x( 'FAQs', 'post type general name' ),
+            'singular_name'      => _x( 'FAQs', 'post type singular name' ),
+            'add_new'            => _x( 'Add New', 'faqs' ),
+            'add_new_item'       => __( 'Add New FAQs' ),
+            'edit_item'          => __( 'Edit FAQs' ),
+            'new_item'           => __( 'New FAQs' ),
+            'all_items'          => __( 'All FAQs' ),
+            'view_item'          => __( 'View FAQs' ),
+            'search_items'       => __( 'Search FAQs' ),
+            'not_found'          => __( 'No FAQs found' ),
+            'not_found_in_trash' => __( 'No FAQs found in the Trash' ),
+            'parent_item_colon'  => '',
+            'menu_name'          => 'FAQs'
+    );
+    $args = array(
+            'labels'        => $labels,
+            'description'   => 'Holds our FAQs and FAQs specific data',
+            'public'        => true,
+            'menu_position' => 5,
+            'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+            'has_archive'   => true,
+    );
+    register_post_type( 'faqs', $args );
+}
+add_action( 'init', 'my_custom_post_faqs' );

@@ -24,29 +24,30 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 
     <section>
-        <div class="section text-center section-intro section-attend">
+        <div class="section text-center section-intro section-attend animatedParent animateOnce">
             <div class="container">
-                <h2 class="title section-title">General Agenda</h2>
-                <div class="general-list">
+                <h2 class="title section-title animated fadeIn delay-500">General Agenda</h2>
+                <div class="general-list animated fadeInUpShort delay-750">
                     <?php
                     query_posts(array(
-                        'post_type' => 'post',
-                        'posts_per_page' => 3,
-                        'orderby'        => 'ASC'
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                            'order'        => ASC,
                     ));
                     if ( have_posts() ) : ?>
-                    <ul>
-                        <?php while(have_posts()) : the_post(); ?>
-                        <li>
-                            <div class="general-list-holder">
-                                <a href="">
-                                    <h1><?php the_time('l'); ?></h1>
-                                    <p><?php the_time('F j'); ?></p>
-                                </a>
-                            </div>
-                        </li>
-                        <?php endwhile; wp_reset_query(); ?>
-                    </ul>
+                        <ul>
+                            <?php while(have_posts()) : the_post(); ?>
+                                <li>
+                                    <div class="general-list-holder">
+                                        <a href="">
+                                            <?php $dates = DateTime::createFromFormat('Ymd', get_field('time')); ?>
+                                            <h1><?php echo $dates->format('l'); ?></h1>
+                                            <p><?php echo $dates->format('F j'); ?></p>
+                                        </a>
+                                    </div>
+                                </li>
+                            <?php endwhile; wp_reset_query(); ?>
+                        </ul>
                     <?php endif; ?>
                 </div>
             </div>
@@ -54,23 +55,23 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </section>
     <section>
         <div class="banner banner-sub banner-subcontent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-agenda-sub.jpg');">
-            <div class="banner-caption">
-                <h1 class="title banner-title-subpage"><?php the_field('content_title'); ?></h1>
+            <div class="banner-caption animatedParent animateOnce">
+                <h1 class="title banner-title-subpage animated fadeInDownShort"><?php the_field('content_title'); ?></h1>
                 <div class="gap-20"></div>
-                <div class="description">
+                <div class="description animated fadeInUpShort">
                     <?php the_field('content_description'); ?>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="section text-center section-proposal">
+        <div class="section text-center section-proposal animatedParent animateOnce">
             <div class="container">
-                <h2 class="title section-title">Call for Proposals</h2>
-                <p class="green-date">dallas, texas  |   october 25-27, 2016</p>
-                <p class="deadline-text">Deadline May 1, 2016</p>
+                <h2 class="title section-title animated fadeInDownShort">Call for Proposals</h2>
+                <p class="green-date animated fadeIn delay-250">dallas, texas  |   october 25-27, 2016</p>
+                <p class="deadline-text animated fadeIn delay-500">Deadline May 1, 2016</p>
 
-                <div class="description">
+                <div class="description animated fadeIn delay-750">
                     <!-- <p>For two and a half days, attendees will network with global peers and hear from industry experts in sessions focused on thought leadership and best practices.  You can be a part of this year’s program! We are very interested in innovative presentation formats including case studies, panel discussions, and other cutting-edge learning formats. We welcome all new ideas and encourage forward-thinking presentations.</p>
 
                     <p>All program sessions are 45-60 minutes in length and are designed to share information on industry trends, insights, opportunities and education specific to the meetings, events and travel industry.  Session formats may include: facilitated discussions, case studies, hands-on learning, panels, etc.  We challenge you to submit unique topic ideas as well as unique formats for delivery.  </p> -->
