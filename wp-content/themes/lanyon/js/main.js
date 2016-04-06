@@ -4,17 +4,27 @@
         $(window).scroll(function() {
             if ($(this).scrollTop() > 1){
                 $('.navbar-menu').addClass('navbar-animated');
+                $('body').addClass("is-show");
             }
             else{
                 $('.navbar-menu').removeClass('navbar-animated');
+                $('body').addClass("is-show");
             }
         });
 
         $(".navbar-menu-toggle").click(function() {
-            $(this).toggleClass("active");
-            $('body').toggleClass("cbp-spmenu-push-toleft");
-            $('.mobile-nav').toggleClass("cbp-spmenu-open");
+            $(this).addClass("active");
+            $('body').addClass("cbp-spmenu-push-toleft");
+            $('.mobile-nav').addClass("cbp-spmenu-open");
         });
+
+        $(".menu-toggle").click(function() {
+            $(this).removeClass("active");
+            $('body').removeClass("cbp-spmenu-push-toleft");
+            $('.mobile-nav').removeClass("cbp-spmenu-open");
+        });
+
+
 
         $(function() {
             $('.banner-home a[href*="#"]:not([href="#"])').click(function() {

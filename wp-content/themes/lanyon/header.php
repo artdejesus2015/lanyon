@@ -24,6 +24,14 @@
     <![endif]-->
 
     <?php wp_head(); ?>
+
+    <style>
+        @media screen and (max-width: 782px) {
+            html {
+                margin-top: 0 !important;
+            }
+        }
+    </style>
 </head>
 
 <body <?php body_class( 'cbp-spmenu-push' ); ?>>
@@ -33,6 +41,7 @@
 
 <header>
     <nav class="mobile-nav cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+        <button type="button" class="menu-toggle"><span class="icon-cross"></span></button>
 
         <?php
 
