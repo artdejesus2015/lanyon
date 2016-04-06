@@ -9488,7 +9488,7 @@ ul li a {
     float: none!important;
   }
   .travel-grid-img {
-    padding-bottom: 2em;
+    margin-bottom: 2em;
   }
   .navbar-menu-collapse {
     display: none;
