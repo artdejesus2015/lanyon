@@ -58,7 +58,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <div class="circle-icon big-circle-small circle-bordered-blue circle-bordered-blue2"><p>persona 10</p></div>
                     <div class="circle-icon big-circle-medium circle-bordered-blue circle-bordered-blue3"><p>persona 11</p></div>
                     <div class="circle-icon big-circle-large circle-bordered-blue circle-bordered-blue4"><p>persona 1</p></div>
-
                 </div>
 
             </div>
