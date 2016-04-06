@@ -53,7 +53,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     </div>
 
                     <div class="text-center">
-                        <a href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=14677675" class="btn btn-register">Book Now</a>
+                        <a href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=14677675" target="_blank" class="btn btn-register">Book Now</a>
                     </div>
 
                     <div class="travel-grid-item travel-grid-item3">
