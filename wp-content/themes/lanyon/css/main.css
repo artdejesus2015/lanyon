@@ -6972,6 +6972,7 @@ ul li a {
   padding: 60px 70px;
   position: relative;
   z-index: 1;
+  font-size: 25px;
 }
 .btn-register:before {
   content: '';
@@ -7313,6 +7314,97 @@ ul li a {
 .travel-grid-item .travel-grid-img .travel-car-img img:last-child {
   margin-left: -5em;
   margin-top: -2em;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img,
+.travel-grid-item3 .travel-grid-description .travel-grid-img {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-clouds,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-clouds,
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-airplane,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-airplane,
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-building,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-building,
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-car,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-car {
+  position: absolute;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-car,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-car {
+  bottom: 0;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-car.travel-car1,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-car.travel-car1 {
+  right: -30%;
+  -webkit-animation: 30s linear car1 infinite;
+  -moz-animation: 30s linear car1 infinite;
+  animation: 30s linear car1 infinite;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-car.travel-car2,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-car.travel-car2 {
+  right: -10%;
+  -webkit-animation: 30s linear car2 infinite;
+  -moz-animation: 30s linear car2 infinite;
+  animation: 30s linear car2 infinite;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-clouds,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-clouds {
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-position: 0 center;
+  height: 300px;
+  top: 0;
+  width: 100%;
+  -webkit-animation: 30s linear clouds infinite;
+  -moz-animation: 30s linear clouds infinite;
+  animation: 30s linear clouds infinite;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-airplane,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-airplane {
+  right: 0;
+  top: 26%;
+  -webkit-animation: 30s linear plane infinite;
+  -moz-animation: 30s linear plane infinite;
+  animation: 30s linear plane infinite;
+}
+.travel-grid-item1 .travel-grid-description .travel-grid-img .travel-building,
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-building {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.travel-grid-item3 .travel-grid-description .travel-grid-img {
+  text-align: center;
+  height: 300px;
+}
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-clouds {
+  height: 200px;
+}
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-building {
+  bottom: 32px;
+  width: auto;
+  margin: 0 auto;
+}
+.travel-grid-item3 .travel-grid-description .travel-grid-img .travel-road-line {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 12px;
+  height: 3px;
+  background-color: #f8f8f8;
+  width: 100%;
+  max-width: 407px;
+  margin: 0 auto;
+  text-align: center;
+}
+.travel-grid-item2 {
+  padding-bottom: 0;
+}
+.travel-grid-item3 {
+  padding-top: 2em;
 }
 .logo-wrap {
   padding-top: 4em;
@@ -8246,6 +8338,182 @@ ul li a {
     transform: translate(0, 0px);
   }
 }
+@-webkit-keyframes clouds {
+  0% {
+    background-position: 0 center;
+  }
+  50% {
+    background-position: 75px center;
+  }
+  100% {
+    background-position: 150px center;
+  }
+}
+@-moz-keyframes clouds {
+  0% {
+    background-position: 0 center;
+  }
+  50% {
+    background-position: 75px center;
+  }
+  100% {
+    background-position: 150px center;
+  }
+}
+@-ms-keyframes clouds {
+  0% {
+    background-position: 0 center;
+  }
+  50% {
+    background-position: 75px center;
+  }
+  100% {
+    background-position: 150px center;
+  }
+}
+@keyframes clouds {
+  0% {
+    background-position: 0 center;
+  }
+  50% {
+    background-position: 75px center;
+  }
+  100% {
+    background-position: 150px center;
+  }
+}
+@-webkit-keyframes plane {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 55%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@-moz-keyframes plane {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 55%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@-ms-keyframes plane {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 55%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@keyframes plane {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 55%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@-webkit-keyframes car1 {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: 80%;
+  }
+  100% {
+    right: 130%;
+  }
+}
+@-moz-keyframes car1 {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: 80%;
+  }
+  100% {
+    right: 130%;
+  }
+}
+@-ms-keyframes car1 {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: 80%;
+  }
+  100% {
+    right: 130%;
+  }
+}
+@keyframes car1 {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: 80%;
+  }
+  100% {
+    right: 130%;
+  }
+}
+@-webkit-keyframes car2 {
+  0% {
+    right: -10%;
+  }
+  50% {
+    right: 60%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@-moz-keyframes car2 {
+  0% {
+    right: -10%;
+  }
+  50% {
+    right: 60%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@-ms-keyframes car2 {
+  0% {
+    right: -10%;
+  }
+  50% {
+    right: 60%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+@keyframes car2 {
+  0% {
+    right: -10%;
+  }
+  50% {
+    right: 60%;
+  }
+  100% {
+    right: 110%;
+  }
+}
 .navbar-menu {
   margin: 0;
   background-color: transparent;
@@ -9112,6 +9380,9 @@ ul li a {
 }
 .section-proposal .under-list li:last-child {
   margin-bottom: 0;
+}
+.section-travel {
+  padding-bottom: 0;
 }
 .footer {
   padding: 80px 0;

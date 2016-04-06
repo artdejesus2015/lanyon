@@ -331,6 +331,109 @@
   }
 }
 
+.travel-grid-item1, .travel-grid-item3 {
+  .travel-grid-description {
+    .travel-grid-img {
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+
+      .travel-clouds, .travel-airplane, .travel-building, .travel-car {
+        position: absolute;
+      }
+
+      .travel-car {
+        bottom: 0;
+
+        &.travel-car1 {
+          right: -30%;
+          -webkit-animation: 30s linear car1 infinite;
+          -moz-animation: 30s linear car1 infinite;
+          animation: 30s linear car1 infinite;
+        }
+
+        &.travel-car2 {
+          right: -10%;
+          -webkit-animation: 30s linear car2 infinite;
+          -moz-animation: 30s linear car2 infinite;
+          animation: 30s linear car2 infinite;
+        }
+      }
+
+      .travel-clouds {
+        background-repeat: repeat-x;
+        background-position: center center;
+        background-position: 0 center;
+        height: 300px;
+        top: 0;
+        width: 100%;
+        -webkit-animation: 30s linear clouds infinite;
+        -moz-animation: 30s linear clouds infinite;
+        animation: 30s linear clouds infinite;
+      }
+
+
+      .travel-airplane {
+        right: 0;
+        top: 26%;
+        -webkit-animation: 30s linear plane infinite;
+        -moz-animation: 30s linear plane infinite;
+        animation: 30s linear plane infinite;
+      }
+
+      .travel-building {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+ .travel-grid-item3 {
+  .travel-grid-description {
+    .travel-grid-img {
+      text-align: center;
+      height: 300px;
+
+      .travel-clouds {
+        height: 200px;
+      }
+
+      .travel-building {
+        bottom: 32px;
+        width: auto;
+        margin: 0 auto;
+
+      }
+
+      .travel-road-line {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 12px;
+        height: 3px;
+        background-color: #f8f8f8;
+        width: 100%;
+        max-width: 407px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+.travel-grid-item2 {
+  padding-bottom: 0;
+}
+
+.travel-grid-item3 {
+  padding-top: 2em;
+}
+
 .logo-wrap {
   padding-top: 4em;
   padding-bottom: 4em;
