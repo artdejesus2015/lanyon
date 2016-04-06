@@ -8570,7 +8570,7 @@ ul li a {
   height: 450px;
 }
 .banner-subcontent .banner-caption .description p {
-  font-size: 17px;
+  font-size: 17px!important;
   margin-bottom: 5px;
 }
 .banner-subcontent:before {
@@ -9258,6 +9258,12 @@ ul li a {
   .section-happened .content-left {
     padding-bottom: 3em;
   }
+  .section-proposal .description ul {
+    padding: 1em 1em;
+  }
+  .general-list ul li .general-list-holder {
+    padding: 1em;
+  }
 }
 @media (max-width: 900px) {
   .banner .banner-caption img {
@@ -9310,6 +9316,11 @@ ul li a {
   .grid-list-green li:before {
     display: none;
   }
+  .section-proposal .under-list li p {
+    width: 100%;
+    font-size: 16px;
+    display: block;
+  }
 }
 @media (max-width: 640px) {
   .banner-sub .banner-title {
@@ -9349,9 +9360,27 @@ ul li a {
     top: -25px;
   }
 }
+@media (max-width: 551px) {
+  .general-list ul li .general-list-holder {
+    border-right: 0;
+  }
+}
 @media (max-width: 480px) {
   .banner-sub .banner-title {
     font-size: 45px;
     bottom: -16px;
+  }
+  .banner-title-subpage {
+    font-size: 30px;
+  }
+  .banner-sub .banner-caption .description p {
+    font-size: 18px;
+  }
+  .section-proposal .section-title {
+    font-size: 45px;
+  }
+  .section-proposal .green-date {
+    font-size: 13px;
+    letter-spacing: 2px;
   }
 }
