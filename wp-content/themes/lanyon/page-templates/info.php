@@ -28,91 +28,24 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="container">
                 <div class="content content-info">
                     <div class="description copy">
-                        <h5>Who Will Be at Lanyon Live</h5>
-                        <ul>
-                            <li>Marketing Directors, CMOs, Programs Managers</li>
-                            <li>Global Events Directors, Event Marketing Managers, Conference Directors</li>
-                            <li>Corporate Meetings Directors, Strategic Meetings Management Specialists, Sourcing Directors</li>
-                            <li>Corporate Travel Buyers, Procurement Executives, Supply Chain Managers, Corporate Travel Intermediaries</li>
-                            <li>Hotel Sales Executives, Global Distribution and Strategy Directors</li>
-                        </ul>
+
+                        <h5><?php the_field('heading_title'); ?></h5>
+                        <?php the_field('info_content');?>
                     </div>
 
                     <h2 class="title section-title">What’s in it for me?</h2>
                     <div class="grid-info">
-                        <div class="grid-info-item">
+                        <?php while (have_rows('info_item')): the_row(); ?>
+                            <div class="grid-info-item">
+                                <div class="description copy">
+                                    <h5><?php the_sub_field('info_item_title'); ?></h5>
+                                    <p><?php the_sub_field('info_item_content'); ?></p>
 
-                            <div class="description copy">
-                                <h5>CMO, Marketing Director, Programs Manager</h5>
-                                <p>You oversee all areas of marketing within your organization, including your brand presence at trade shows and other conventions. At Lanyon Live 2015, you’ll get the latest tips to drive more pipeline from your events, as make lasting connections with like minded industry leaders.</p>
-
-                                <h6>Connect with:</h6>
-                                <p>Mentors (or mentees!), marketing professionals facing similar challenges and offering solutions.</p>
+                                    <h6>Connect with:</h6>
+                                    <p><?php the_sub_field('info_connect'); ?></p>
+                                </div>
                             </div>
-
-                        </div>
-
-                        <div class="grid-info-item">
-                            <div class="description copy">
-                                <h5>Global Events Director, Event Marketing Manager, Conference Director</h5>
-                                <p>You’re charged with creating a great experience for your attendees, partners and sales staff, while demonstrating how your events deliver real business results and ROI. At Lanyon Live 2015, you’ll learn from experienced leaders in the industry and make connections that will serve you throughout your career.</p>
-                                <h6>Connect with:</h6>
-                                <p>Fellow event planners who face similar challenges and can offer innovative solutions, hoteliers who are looking to win business from event planners</p>
-                            </div>
-
-                        </div>
-
-                        <div class="grid-info-item">
-                            <div class="description copy">
-                                <h5>Corporate Meetings Director, Strategic Meetings Management Specialist</h5>
-                                <p>You’re the ultimate multi-tasker. Every day, you juggle your attendees’ needs and your organization’s business objectives — all while staying on-budget and reporting ROI. At Lanyon Live 2015, you’ll connect with and learn from experienced leaders in the industry and make connections that will serve you throughout your career.</p>
-                                <h6>Connect with:</h6>
-                                <p>Professionals running global SMM programs in an increasingly compantative landscape. Hoteliers looking to build relationships with corporate meeting planners.</p>
-                            </div>
-
-                        </div>
-
-                        <div class="grid-info-item">
-                            <div class="description copy">
-                                <h5>Corporate Travel Buyer, Supply Chain Manager, Corporate Travel Intermediary</h5>
-                                <p>Lanyon software makes your job easier and saves you money by helping you negotiate with suppliers, while giving you a 360º view of your travel spend.
-                                    At Lanyon Live 2015, you’ll learn directly from the experts and creators how to get the most out of our products — making a working solution work even better.</p>
-                                <h6>Connect with:</h6>
-                                <p>Field experts who’ve overcome industry challenges and can share results. Hotel professionals eager to build relationships with corporate travel buyers</p>
-                            </div>
-
-                        </div>
-
-                        <div class="grid-info-item">
-                            <div class="description copy">
-                                <h5>Procurement Director, Global Supply Chain Manager</h5>
-                                <p>Meetings and travel play a vital role in your company. They’re also a big expense, and it’s important that you have control over those costs. Our software helps with that — a lot. At Lanyon Live 2015, you’ll trade best practices with other experts and learn innovative ways to make our software work even better for your organization — and make valuable contacts in the process.</p>
-                                <h6>Connect with:</h6>
-                                <p>Meeting and travel professionals eager to share challenges and best practices, managers who are leading travel and meeting program consolidation, hospitality professionals with worldwide reach </p>
-                            </div>
-
-                        </div>
-
-                        <div class="grid-info-item">
-                            <div class="description copy">
-                                <h5>Hotel Sales Executive, Global Distribution and Strategy Director</h5>
-                                <p>Corporate transient and group business is the most profitable sector for hotels — but one of the most challenging to win. Like our leading-edge software, Lanyon Live connects hoteliers with decision-makers in the transient and group travel business. </p>
-                                <h6>Connect with:</h6>
-                                <p>Meetings, events and travel professionals from around the globe, fellow hospitality professionals sharing best practices for driving transient and group business</p>
-                            </div>
-
-                        </div>
-
-                        <div class="grid-info-item">
-                            <div class="description copy">
-                                <h5>Housing Director, Destination Services Manager, Director of Market Strategy</h5>
-
-                                <p>You work hard to attract events and meetings to your destination.  Lanyon’s software helps you attract corporate planners to your area and partner with local and regional hotels to simplify housing management — even for the largest, most complex events.  At Lanyon Live 2015, you’ll hear about industry trends while you make new contacts.  And Lanyon experts will be there to help you find new ways to be even more effective.</p>
-                                <h6>Connect with:</h6>
-                                <p>Corporate event and meeting planning executives who seek to improve their meetings and events.  Hotel executives who want to build relationships.</p>
-                            </div>
-
-                        </div>
+                        <?php endwhile; ?>
                     </div>
                 </div>
             </div>
@@ -150,10 +83,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                                 </div>
                                 <?php $cntr++; endwhile; wp_reset_query(); ?>
                         <?php endif; ?>
-
-
-
-
                     </div>
                 </div>
             </div>
