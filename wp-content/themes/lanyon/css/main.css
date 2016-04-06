@@ -6900,6 +6900,66 @@ ul li a {
 .text-white {
   color: #fff !important;
 }
+.copy {
+  text-align: left;
+  padding-top: 2em;
+  margin-bottom: 5em;
+}
+.copy p:last-child {
+  margin-bottom: 2em;
+}
+.copy ul {
+  padding-left: 3em;
+  margin-bottom: 2em;
+}
+.copy ul li {
+  display: block;
+  text-align: left;
+  position: relative;
+  padding-left: 30px;
+}
+.copy ul li:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  height: 10px;
+  width: 10px;
+  background-color: #00c4b3;
+  border-radius: 10px;
+  vertical-align: baseline;
+  margin-right: 15px;
+}
+.copy h1,
+.copy h2,
+.copy h3,
+.copy h4,
+.copy h5,
+.copy h6 {
+  margin-bottom: 2em;
+  font-family: 'ProximaNovaLight', sans-serif;
+  text-align: left;
+  margin-bottom: 1em;
+}
+.copy h1 {
+  font-size: 47px;
+}
+.copy h2 {
+  font-size: 42px;
+}
+.copy h3 {
+  font-size: 37px;
+}
+.copy h4 {
+  font-size: 32px;
+}
+.copy h5 {
+  font-size: 27px;
+}
+.copy h6 {
+  font-size: 22px;
+}
 .btn {
   letter-spacing: 1px;
 }
@@ -8514,6 +8574,30 @@ ul li a {
     right: 110%;
   }
 }
+.modal-video2015 .modal-dialog {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%) !important;
+  -moz-transform: translate(0, -50%) !important;
+  -ms-transform: translate(0, -50%) !important;
+  -o-transform: translate(0, -50%) !important;
+  transform: translate(0, -50%) !important;
+  width: 80%;
+  margin: 0 auto;
+}
+.modal-video2015 .modal-dialog .modal-content iframe {
+  width: 100%;
+  height: 800px;
+}
+.modal-backdrop.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.modal-open .modal-video2015 {
+  cursor: url("../images/img-modal-cursor.png"), auto;
+}
 .navbar-menu {
   margin: 0;
   background-color: transparent;
@@ -9305,6 +9389,31 @@ ul li a {
   bottom: 35%;
   left: 30%;
 }
+.section-info .content-info {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section-info .content-info .description {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+.section-info .content-info .grid-info .grid-info-item {
+  padding: 20px 30px;
+  box-shadow: 0 1px 20px #EAEAEA;
+  margin-bottom: 2em;
+}
+.section-info .content-info .grid-info .grid-info-item h5 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.section-info .content-info .grid-info .grid-info-item h6 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.section-info .content-info .grid-info .grid-info-item p:last-child {
+  margin-bottom: 0;
+}
 .section-proposal .section-title {
   margin-bottom: 0;
 }
@@ -9324,37 +9433,6 @@ ul li a {
   font-size: 28px;
   text-align: left;
   margin-bottom: 1em;
-}
-.section-proposal .description {
-  text-align: left;
-  padding-top: 2em;
-  margin-bottom: 5em;
-}
-.section-proposal .description p:last-child {
-  margin-bottom: 2em;
-}
-.section-proposal .description ul {
-  padding-left: 3em;
-  margin-bottom: 2em;
-}
-.section-proposal .description ul li {
-  display: block;
-  text-align: left;
-  position: relative;
-  padding-left: 30px;
-}
-.section-proposal .description ul li:before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 6px;
-  height: 10px;
-  width: 10px;
-  background-color: #00c4b3;
-  border-radius: 10px;
-  vertical-align: baseline;
-  margin-right: 15px;
 }
 .section-proposal .under-list {
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
