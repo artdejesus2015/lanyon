@@ -22,6 +22,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
         <h1 class="title banner-title animated fadeInUpShort">Info</h1>
     </div>
+
     <section>
         <div class="section text-center section-intro section-info">
             <div class="container">
