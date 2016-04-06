@@ -39,7 +39,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             <?php while(have_posts()) : the_post(); ?>
                                 <li>
                                     <div class="general-list-holder">
-                                        <a href="">
+                                        <a href="<?php the_permalink(); ?>">
                                             <?php $dates = DateTime::createFromFormat('Ymd', get_field('time')); ?>
                                             <h1><?php echo $dates->format('l'); ?></h1>
                                             <p><?php echo $dates->format('F j'); ?></p>
