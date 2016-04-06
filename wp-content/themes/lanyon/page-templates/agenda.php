@@ -71,12 +71,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <p class="green-date animated fadeIn delay-250">dallas, texas  |   october 25-27, 2016</p>
                 <p class="deadline-text animated fadeIn delay-500">Deadline May 1, 2016</p>
 
-                <div class="description animated fadeIn delay-750">
-                    <!-- <p>For two and a half days, attendees will network with global peers and hear from industry experts in sessions focused on thought leadership and best practices.  You can be a part of this year’s program! We are very interested in innovative presentation formats including case studies, panel discussions, and other cutting-edge learning formats. We welcome all new ideas and encourage forward-thinking presentations.</p>
+                <div class="description copy animated fadeIn delay-750">
 
-                    <p>All program sessions are 45-60 minutes in length and are designed to share information on industry trends, insights, opportunities and education specific to the meetings, events and travel industry.  Session formats may include: facilitated discussions, case studies, hands-on learning, panels, etc.  We challenge you to submit unique topic ideas as well as unique formats for delivery.  </p> -->
-
-                    <h3 class="content-title">What is Lanyon Live?</h3>
+                    <h5>What is Lanyon Live?</h5>
                     <p>Lanyon is the leading provider of software solutions for corporate meetings, events and travel programs. Every day, we help thousands of organizations and hotels around the world - including over 80 percent of the Fortune 100, thousands of small and medium businesses, and over 100,000 hotels - to automate manual tasks, engage their customers, reduce costs and grow revenue in ways they never thought possible. Lanyon Live brings together leadership and decision makers from across the meetings, events, travel and hotel industries. For two and a half days, they will network with global peers and hear from industry experts in sessions focused on thought leadership and best practices. You can be a part of this year’s program! We are very interested in innovative presentation formats including case studies, panel discussions, and other cutting-edge learning formats. We welcome all new ideas and encourage forward-thinking presentations.</p>
 
                     <h3 class="content-title">Audience</h3>
@@ -91,10 +88,10 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                         <li> Destination marketing, CVB and meeting management company executives</li>
                     </ul>
 
-                    <h3 class="content-title">Education: </h3>
+                    <h5>Education: </h5>
                     <p>All program sessions are 60 minutes in length and are designed to share information on industry trends, insights, opportunities and education specific to the meetings, events and travel industry. Session formats may include: facilitated discussions, case studies, hands-on learning, panels, etc. We challenge you to submit unique topic ideas as well as unique formats for delivery. All education will take place on Wednesday & Thursday, October 26-27, 2016. </p>
 
-                    <h3 class="content-title">More information:</h3>
+                    <h5>More information:</h5>
 
                     <ul>
                         <li>Submission does not guarantee inclusion</li>

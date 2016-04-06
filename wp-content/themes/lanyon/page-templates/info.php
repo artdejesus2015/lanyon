@@ -26,40 +26,95 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     <section>
         <div class="section text-center section-intro section-info">
             <div class="container">
-                <div class="circle-wrap">
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray1"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray2"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray3"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray4"></div>
+                <div class="content content-info">
+                    <div class="description copy">
+                        <h5>Who Will Be at Lanyon Live</h5>
+                        <ul>
+                            <li>Marketing Directors, CMOs, Programs Managers</li>
+                            <li>Global Events Directors, Event Marketing Managers, Conference Directors</li>
+                            <li>Corporate Meetings Directors, Strategic Meetings Management Specialists, Sourcing Directors</li>
+                            <li>Corporate Travel Buyers, Procurement Executives, Supply Chain Managers, Corporate Travel Intermediaries</li>
+                            <li>Hotel Sales Executives, Global Distribution and Strategy Directors</li>
+                        </ul>
+                    </div>
 
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray5"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray6"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray7"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray8"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray9"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray10"></div>
+                    <h2 class="title section-title">What’s in it for me?</h2>
+                    <div class="grid-info">
+                        <div class="grid-info-item">
 
-                    <div class="circle-icon circle-medium circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray11"></div>
-                    <div class="circle-icon circle-medium circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray12"></div>
+                            <div class="description copy">
+                                <h5>CMO, Marketing Director, Programs Manager</h5>
+                                <p>You oversee all areas of marketing within your organization, including your brand presence at trade shows and other conventions. At Lanyon Live 2015, you’ll get the latest tips to drive more pipeline from your events, as make lasting connections with like minded industry leaders.</p>
 
-                    <div class="circle-icon circle-large circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray13"></div>
+                                <h6>Connect with:</h6>
+                                <p>Mentors (or mentees!), marketing professionals facing similar challenges and offering solutions.</p>
+                            </div>
 
-                    <div class="circle-icon big-circle-small circle-bordered-orange circle-bordered-orange1"><p>persona 7</p></div>
-                    <div class="circle-icon big-circle-medium circle-bordered-orange circle-bordered-orange2"><p>persona 12</p></div>
-                    <div class="circle-icon big-circle-large circle-bordered-orange circle-bordered-orange3"><p>persona 3</p></div>
+                        </div>
 
-                    <div class="circle-icon big-circle-small circle-bordered-green circle-bordered-green1"><p>persona 4</p></div>
-                    <div class="circle-icon big-circle-small circle-bordered-green circle-bordered-green2"><p>persona 6</p></div>
-                    <div class="circle-icon big-circle-medium circle-bordered-green circle-bordered-green3"><p>persona 8</p></div>
-                    <div class="circle-icon big-circle-medium circle-bordered-green circle-bordered-green4"><p>persona 9</p></div>
-                    <div class="circle-icon big-circle-large circle-bordered-green circle-bordered-green5"><p>persona 2</p></div>
+                        <div class="grid-info-item">
+                            <div class="description copy">
+                                <h5>Global Events Director, Event Marketing Manager, Conference Director</h5>
+                                <p>You’re charged with creating a great experience for your attendees, partners and sales staff, while demonstrating how your events deliver real business results and ROI. At Lanyon Live 2015, you’ll learn from experienced leaders in the industry and make connections that will serve you throughout your career.</p>
+                                <h6>Connect with:</h6>
+                                <p>Fellow event planners who face similar challenges and can offer innovative solutions, hoteliers who are looking to win business from event planners</p>
+                            </div>
 
-                    <div class="circle-icon big-circle-small circle-bordered-blue circle-bordered-blue1"><p>persona 5</p></div>
-                    <div class="circle-icon big-circle-small circle-bordered-blue circle-bordered-blue2"><p>persona 10</p></div>
-                    <div class="circle-icon big-circle-medium circle-bordered-blue circle-bordered-blue3"><p>persona 11</p></div>
-                    <div class="circle-icon big-circle-large circle-bordered-blue circle-bordered-blue4"><p>persona 1</p></div>
+                        </div>
+
+                        <div class="grid-info-item">
+                            <div class="description copy">
+                                <h5>Corporate Meetings Director, Strategic Meetings Management Specialist</h5>
+                                <p>You’re the ultimate multi-tasker. Every day, you juggle your attendees’ needs and your organization’s business objectives — all while staying on-budget and reporting ROI. At Lanyon Live 2015, you’ll connect with and learn from experienced leaders in the industry and make connections that will serve you throughout your career.</p>
+                                <h6>Connect with:</h6>
+                                <p>Professionals running global SMM programs in an increasingly compantative landscape. Hoteliers looking to build relationships with corporate meeting planners.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-info-item">
+                            <div class="description copy">
+                                <h5>Corporate Travel Buyer, Supply Chain Manager, Corporate Travel Intermediary</h5>
+                                <p>Lanyon software makes your job easier and saves you money by helping you negotiate with suppliers, while giving you a 360º view of your travel spend.
+                                    At Lanyon Live 2015, you’ll learn directly from the experts and creators how to get the most out of our products — making a working solution work even better.</p>
+                                <h6>Connect with:</h6>
+                                <p>Field experts who’ve overcome industry challenges and can share results. Hotel professionals eager to build relationships with corporate travel buyers</p>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-info-item">
+                            <div class="description copy">
+                                <h5>Procurement Director, Global Supply Chain Manager</h5>
+                                <p>Meetings and travel play a vital role in your company. They’re also a big expense, and it’s important that you have control over those costs. Our software helps with that — a lot. At Lanyon Live 2015, you’ll trade best practices with other experts and learn innovative ways to make our software work even better for your organization — and make valuable contacts in the process.</p>
+                                <h6>Connect with:</h6>
+                                <p>Meeting and travel professionals eager to share challenges and best practices, managers who are leading travel and meeting program consolidation, hospitality professionals with worldwide reach </p>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-info-item">
+                            <div class="description copy">
+                                <h5>Hotel Sales Executive, Global Distribution and Strategy Director</h5>
+                                <p>Corporate transient and group business is the most profitable sector for hotels — but one of the most challenging to win. Like our leading-edge software, Lanyon Live connects hoteliers with decision-makers in the transient and group travel business. </p>
+                                <h6>Connect with:</h6>
+                                <p>Meetings, events and travel professionals from around the globe, fellow hospitality professionals sharing best practices for driving transient and group business</p>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-info-item">
+                            <div class="description copy">
+                                <h5>Housing Director, Destination Services Manager, Director of Market Strategy</h5>
+
+                                <p>You work hard to attract events and meetings to your destination.  Lanyon’s software helps you attract corporate planners to your area and partner with local and regional hotels to simplify housing management — even for the largest, most complex events.  At Lanyon Live 2015, you’ll hear about industry trends while you make new contacts.  And Lanyon experts will be there to help you find new ways to be even more effective.</p>
+                                <h6>Connect with:</h6>
+                                <p>Corporate event and meeting planning executives who seek to improve their meetings and events.  Hotel executives who want to build relationships.</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -196,9 +251,35 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                         <p>Check out what happened last year</p>
                     </div>
 
-                    <a href="#" class="btn btn-primary btn-mw btn-bordered">watch 2015 recap</a>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-mw btn-bordered" data-toggle="modal" data-target="#myModal">
+                        watch 2015 recap
+                    </button>
 
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section text-center section-scoop animatedParent">
+            <div class="container">
+                <h2 class="title section-title animated fadeInDownShort">Get the Latest Scoop</h2>
+
+                <div class="description animated fadeIn delay-250">
+                    <p>Sign up to get the latest news, special deals,  and updates on Lanyon Live</p>
+                </div>
+
+                <div class="form-inline animated fadeIn delay-500">
+                    <form>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
+                        </div>
+                        <button type="submit" class="btn btn-primary">register now</button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>

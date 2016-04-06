@@ -22,7 +22,11 @@ get_header();
 
         <div class="button-wrap animated fadeIn delay-1000">
             <a href="#" class="btn btn-primary btn-mw">register now</a>
-            <a href="#" class="btn btn-primary btn-mw btn-bordered">watch 2015 recap</a>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-mw btn-bordered" data-toggle="modal" data-target="#myModal">
+                watch 2015 recap
+            </button>
         </div>
     </div>
 
