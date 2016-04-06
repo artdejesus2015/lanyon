@@ -1,3 +1,7 @@
 .git
+<<<<<<< HEAD
 wp-content/plugins/advance-custom-fields
+=======
+wp-content/plugins
+>>>>>>> origin/master
 wp-content/themes/lanyon/config.codekit
