@@ -21,12 +21,12 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         <div class="section section-travel">
             <div class="container">
                 <div class="travel-grid">
-                    <div class="travel-grid-item">
+                    <div class="travel-grid-item travel-grid-item1">
                         <div class="col-md-6 travel-grid-description">
                             <div class="travel-grid-img">
-                                <div class="circle-bg">
-                                    <div class="travel-airplane"></div>
-                                </div>
+                                <div class="travel-clouds" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/travel-cloud.png')"></div>
+                                <img class="travel-airplane" src="<?php echo get_stylesheet_directory_uri(); ?>/images/travel-airplane.png">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/travel-building.png" class="travel-building">
                             </div>
                         </div>
                         <div class="col-md-6 travel-grid-description">
@@ -36,7 +36,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             </div>
                         </div>
                     </div>
-                    <div class="travel-grid-item">
+                    <div class="travel-grid-item travel-grid-item2">
                         <div class="col-md-6 pull-right travel-grid-description">
                             <div class="travel-grid-img">
                                 <?php while (have_rows('travel_images')): the_row(); ?>
@@ -49,16 +49,22 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             <div class="description">
                                 <?php the_field('travel_description_1'); ?>
                             </div>
-
-                            <a href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=14677675" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
-                    <div class="travel-grid-item">
+
+                    <div class="text-center">
+                        <a href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=14677675" class="btn btn-register">Book Now</a>
+                    </div>
+
+                    <div class="travel-grid-item travel-grid-item3">
                         <div class="col-md-6 travel-grid-description">
                             <div class="travel-grid-img">
-                                <div class="travel-car-img">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/travel-car-2.png" alt="">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/travel-car-1.png" alt="">
+                                <div class="travel-grid-img">
+                                    <div class="travel-clouds" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/travel-cloud.png')"></div>
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/travel-building2.png" class="travel-building">
+                                    <div class="travel-road-line"></div>
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/travel-car-1.png" class="travel-car travel-car1">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/travel-car-2.png" class="travel-car travel-car2">
                                 </div>
                             </div>
                         </div>

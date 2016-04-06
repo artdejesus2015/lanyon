@@ -1,6 +1,5 @@
 <?php
 get_header();
-
 ?>
 
 <div class="banner banner-home animatedParent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">
@@ -489,56 +488,98 @@ get_header();
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark5">
 
             </div>
-
-            <h2 class="title section-title animated fadeInDownShort"><?php the_field('content_title',13); ?></h2>
+            <h2 class="title section-title animated fadeInDownShort">Sponsorship plays a major role in the success of our event.</h2>
 
             <div class="description animated fadeIn delay-250">
-                <p><?php the_field('content_description',13); ?></p>
+                <p>Get your name and your brand seen by leaders and decision-makers in the meetings, events, travel and hospitality industries. <a href="#">Contact us</a> to be a Lanyon Live 2016 Sponsor!</p>
             </div>
 
             <div class="logo-wrap animated fadeInUpShort delay-500">
                 <ul class="logo-list">
                     <li>
-                        <?php while (have_rows('diamond_logo',13)): the_row(); ?>
-                            <div class="logo-item diamond-logo">
-                                <p><?php the_sub_field('logo'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
+                        <div class="logo-item diamond-logo">
+                            <p>Diamond Logo</p>
+                        </div>
                     </li>
 
                     <li>
-                        <?php while (have_rows('platinum_logo',13)): the_row(); ?>
-                            <div class="logo-item platinum-logo">
-                                <p><?php the_sub_field('logo_1'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
+                        <div class="logo-item platinum-logo">
+                            <p>Platinum Logo</p>
+                        </div>
+                        <div class="logo-item platinum-logo">
+                            <p>Platinum Logo</p>
+                        </div>
+                        <div class="logo-item platinum-logo">
+                            <p>Platinum Logo</p>
+                        </div>
                     </li>
 
                     <li>
-                        <?php while (have_rows('gold_logo',13)): the_row(); ?>
-                            <div class="logo-item gold-logo">
-                                <p><?php the_sub_field('logo_2'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
+                        <div class="logo-item gold-logo">
+                            <p>Gold Logo</p>
+                        </div>
+                        <div class="logo-item gold-logo">
+                            <p>Gold Logo</p>
+                        </div>
+                        <div class="logo-item gold-logo">
+                            <p>Gold Logo</p>
+                        </div>
                     </li>
 
                     <li>
-                        <?php while (have_rows('silver_logo',13)): the_row(); ?>
-                            <div class="logo-item silver-logo">
-                                <p><?php the_sub_field('logo_3'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
+                        <div class="logo-item silver-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item silver-logo">
+                            <p>Silver Logo</p>
+                        </div>
                     </li>
 
-                    <?php while (have_rows('bronze_logo',13)): the_row(); ?>
-                        <li>
-                            <?php while (have_rows('logo_4')): the_row(); ?>
-                                <div class="logo-item bronze-logo">
-                                    <p><?php the_sub_field('logo_5'); ?></p>
-                                </div>
-                            <?php endwhile; ?>
-                        </li>
-                    <?php endwhile; ?>
+                    <li>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                        <div class="logo-item bronze-logo">
+                            <p>Silver Logo</p>
+                        </div>
+                    </li>
+
                 </ul>
             </div>
 
