@@ -9800,4 +9800,7 @@ ul li a {
   .section-title {
     margin: 0 auto 25px;
   }
+  .travel-grid-item {
+    padding-bottom: 2em;
+  }
 }
