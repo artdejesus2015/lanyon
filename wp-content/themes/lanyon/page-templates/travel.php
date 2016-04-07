@@ -8,7 +8,7 @@ get_header();
 global $post;
 $post_slug=$post->post_name;
 
-$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
+$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner_bg', false, '' );
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
     ?>
@@ -84,21 +84,21 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </section>
 
     <section>
-        <div class="section text-center section-scoop">
+        <div class="section text-center section-scoop animatedParent">
             <div class="container">
-                <h2 class="title section-title">Get the Latest Scoop</h2>
+                <h2 class="title section-title animated fadeInDownShort"><?php the_field('subscription_title', 'option');?></h2>
 
-                <div class="description">
-                    <p>Sign up to get the latest news, special deals,  and updates on Lanyon Live</p>
+                <div class="description animated fadeIn delay-250">
+                    <?php the_field('subscription_description', 'option');?>
                 </div>
 
-                <div class="form-inline">
+                <div class="form-inline animated fadeIn delay-500">
                     <form>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
                         </div>
-                        <button type="submit" class="btn btn-primary">register now</button>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
                 </div>
 

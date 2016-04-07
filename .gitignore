@@ -1,4 +1,5 @@
 .git
 .idea
 wp-content/plugins/advance-custom-fields
+wp-content/plugins/advance-options-page
 wp-content/themes/lanyon/config.codekit

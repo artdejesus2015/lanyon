@@ -94,7 +94,7 @@
     margin-bottom: 2em;
 
     p {
-      font-size: 36px;
+      font-size: 40px;
       color: #ffffff;
     }
   }
@@ -310,6 +310,53 @@
     }
   }
 
+  .content-right {
+    .description1 {
+      p, .social-media-list {
+        display: inline-block;
+      }
+
+      p {
+        margin: 26px 0;
+      }
+
+      .pl-0{
+        padding-left: 0;
+      }
+
+      .social-media-list {
+        margin-bottom: 0;
+
+        li {
+          margin: 0 1px;
+
+          a {
+            font-size: 17px;
+            padding: 5px 8px;
+          }
+
+          &.icon {
+            height: 30px;
+            width: 30px;
+
+            &.icon3 a {
+              padding: 4px 5px;
+            }
+
+            &.icon4 a {
+              padding: 4px 8px;
+            }
+
+          }
+
+
+        }
+
+
+      }
+    }
+  }
+
 }
 
 .section-mobile-app {
@@ -357,6 +404,8 @@
 
 
 .section-info {
+  padding-bottom: 0;
+
   .circle-wrap {
     height: 600px;
   }
@@ -585,35 +634,48 @@
   .content-info {
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
 
     .description {
       margin: 0;
       padding: 0;
       max-width: none;
+      margin-bottom: 5em;
+
+      .section-title {
+        text-align: center;
+      }
     }
+  }
 
-    .grid-info {
-      .grid-info-item {
-        padding: 20px 30px;
-        box-shadow: 0 1px 20px #EAEAEA;
-        margin-bottom: 2em;
+  .grid-info {
+    .grid-info-item {
+      padding: 20px 30px;
 
-        h5 {
-          font-size: 25px;
-          margin-bottom: 20px;
-        }
+      h5 {
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
 
-        h6 {
-          font-size: 20px;
-          margin-bottom: 20px;
-        }
+      h6 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
 
-        p {
-          &:last-child {
-            margin-bottom: 0;
-          }
+      p {
+        &:last-child {
+          margin-bottom: 0;
         }
       }
+
+      &:nth-child(even) {
+        background-color: #fbfbfb;
+      }
+
+      &:nth-child(odd) {
+        background-color: #f4f4f4;
+      }
+
     }
   }
 }
@@ -678,4 +740,14 @@
 
 .section-travel {
   padding-bottom: 0;
+}
+
+.section-sponsor {
+  .section-title {
+    max-width: 900px;
+  }
+
+  .description {
+    max-width: 690px;
+  }
 }
