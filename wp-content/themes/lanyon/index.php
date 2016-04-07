@@ -43,8 +43,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
         <div class="container">
             <h2 class="title section-title small-title featured-title animated fadeInDownShort">Latest & Greatest</h2>
             <div class="description animated fadeInUpShort delay-250">
-                <p>The Education Tracks are now released.</p>
-                <p><a href="#">Click here</a> to check them out!</p>
+                <p>Attend for less! Take advantage of our special registration launch rate!</p>
             </div>
         </div>
     </div>

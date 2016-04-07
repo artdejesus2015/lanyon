@@ -28,26 +28,32 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="container">
                 <div class="content content-info">
                     <div class="description copy">
-                        <h5><?php the_field('heading_title'); ?></h5>
+                        <h2 class="title section-title"><?php the_field('heading_title'); ?></h2>
                         <?php the_field('info_content');?>
                     </div>
 
                     <h2 class="title section-title">What’s in it for me?</h2>
-                    <div class="grid-info">
-                        <?php while (have_rows('info_item')): the_row(); ?>
-                            <div class="grid-info-item">
-                                <div class="description copy">
-                                    <h5><?php the_sub_field('info_item_title'); ?></h5>
-                                    <p><?php the_sub_field('info_item_content'); ?></p>
 
-                                    <h6>Connect with:</h6>
-                                    <p><?php the_sub_field('info_connect'); ?></p>
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
-                    </div>
                 </div>
+
             </div>
+
+            <div class="grid-info">
+                <?php while (have_rows('info_item')): the_row(); ?>
+                    <div class="grid-info-item">
+                        <div class="container">
+                            <div class="description copy">
+                                <h5><?php the_sub_field('info_item_title'); ?></h5>
+                                <p><?php the_sub_field('info_item_content'); ?></p>
+
+                                <h6>Connect with:</h6>
+                                <p><?php the_sub_field('info_connect'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+
         </div>
     </section>
 
@@ -151,9 +157,16 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                         <h2 class="title section-title section-mini-title">How to Get Involved</h2>
 
                         <div class="content content-right">
-                            <div class="description">
+                            <div class="description description1">
                                 <div class="circle-number">1</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                <p>Follow us! </p>
+                                <ul class="list social-media-list">
+                                    <li class="icon icon1"><a href="#"><span class="icon-facebook"></span></a></li>
+                                    <li class="icon icon2"><a href="#"><span class="icon-twitter"></span></a></li>
+                                    <li class="icon icon3"><a href="#"><span class="icon-google-plus"></span></a></li>
+                                    <li class="icon icon4"><a href="#"><span class="icon-linkedin"></span></a></li>
+                                </ul>
+                                <p class="pl-0">#LanyonLive</p>
                             </div>
 
                             <div class="description">

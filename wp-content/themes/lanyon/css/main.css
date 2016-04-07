@@ -8960,6 +8960,9 @@ ul li a {
   opacity: 0.65;
   filter: alpha(opacity=65);
 }
+.banner-travel {
+  background-size: auto;
+}
 .banner-travel:before {
   opacity: 0;
   filter: alpha(opacity=0);
@@ -9207,6 +9210,36 @@ ul li a {
 .section-happened .content-right .description p {
   padding-left: 6em;
 }
+.section-happened .content-right .description1 p,
+.section-happened .content-right .description1 .social-media-list {
+  display: inline-block;
+}
+.section-happened .content-right .description1 p {
+  margin: 26px 0;
+}
+.section-happened .content-right .description1 .pl-0 {
+  padding-left: 0;
+}
+.section-happened .content-right .description1 .social-media-list {
+  margin-bottom: 0;
+}
+.section-happened .content-right .description1 .social-media-list li {
+  margin: 0 1px;
+}
+.section-happened .content-right .description1 .social-media-list li a {
+  font-size: 17px;
+  padding: 5px 8px;
+}
+.section-happened .content-right .description1 .social-media-list li.icon {
+  height: 30px;
+  width: 30px;
+}
+.section-happened .content-right .description1 .social-media-list li.icon.icon3 a {
+  padding: 4px 5px;
+}
+.section-happened .content-right .description1 .social-media-list li.icon.icon4 a {
+  padding: 4px 8px;
+}
 .section-mobile-app {
   overflow: hidden;
   padding: 12em 0 10em;
@@ -9239,6 +9272,9 @@ ul li a {
   left: 0;
   right: 0;
   top: -120px;
+}
+.section-info {
+  padding-bottom: 0;
 }
 .section-info .circle-wrap {
   height: 600px;
@@ -9423,27 +9459,36 @@ ul li a {
 .section-info .content-info {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 .section-info .content-info .description {
   margin: 0;
   padding: 0;
   max-width: none;
+  margin-bottom: 5em;
 }
-.section-info .content-info .grid-info .grid-info-item {
+.section-info .content-info .description .section-title {
+  text-align: center;
+}
+.section-info .grid-info .grid-info-item {
   padding: 20px 30px;
-  box-shadow: 0 1px 20px #EAEAEA;
-  margin-bottom: 2em;
 }
-.section-info .content-info .grid-info .grid-info-item h5 {
+.section-info .grid-info .grid-info-item h5 {
   font-size: 25px;
   margin-bottom: 20px;
 }
-.section-info .content-info .grid-info .grid-info-item h6 {
+.section-info .grid-info .grid-info-item h6 {
   font-size: 20px;
   margin-bottom: 20px;
 }
-.section-info .content-info .grid-info .grid-info-item p:last-child {
+.section-info .grid-info .grid-info-item p:last-child {
   margin-bottom: 0;
+}
+.section-info .grid-info .grid-info-item:nth-child(even) {
+  background-color: #fbfbfb;
+}
+.section-info .grid-info .grid-info-item:nth-child(odd) {
+  background-color: #f4f4f4;
 }
 .section-proposal .section-title {
   margin-bottom: 0;
