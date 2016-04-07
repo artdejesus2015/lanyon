@@ -8915,7 +8915,7 @@ ul li a {
   color: #0070ce;
 }
 .button-wrap .btn-primary {
-  margin: 0 10px;
+  margin: 0 10px 10px;
 }
 .banner-sub {
   height: 600px;
@@ -9209,6 +9209,7 @@ ul li a {
 }
 .section-happened .content-right .description p {
   padding-left: 6em;
+  margin: 27px 0;
 }
 .section-happened .content-right .description1 p,
 .section-happened .content-right .description1 .social-media-list {
@@ -9607,6 +9608,15 @@ ul li a {
     margin-top: 14px;
     margin-bottom: 14px;
   }
+  .join-wrap .item-caption .description {
+    min-width: 0;
+  }
+  .join-wrap .item-caption {
+    width: 50%;
+  }
+  .join-wrap .item-img {
+    width: 50%;
+  }
 }
 @media (max-width: 1100px) {
   .navbar-menu .navbar-header .navbar-brand {
@@ -9695,15 +9705,43 @@ ul li a {
   .general-list ul li .general-list-holder {
     padding: 1em;
   }
+  .circle-bordered-orange1 {
+    left: 12%;
+  }
+  .circle-bordered-gray2 {
+    right: 15%;
+  }
 }
 @media (max-width: 900px) {
   .banner .banner-caption img {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 }
 @media (max-height: 900px) {
   .banner .banner-caption img {
     max-width: 700px;
+  }
+}
+@media (max-width: 815px) {
+  .banner .banner-caption ul li {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .banner .banner-caption ul li:before {
+    margin-right: 10px;
+  }
+  .banner .banner-caption ul {
+    margin-bottom: 1em;
+  }
+  .banner .banner-caption .description {
+    margin-bottom: 2em;
+  }
+  .btn-mw {
+    min-width: 191px;
+  }
+  .btn-primary {
+    font-size: 12px;
+    padding: 20px 30px;
   }
 }
 @media (max-height: 800px) {
@@ -9724,6 +9762,16 @@ ul li a {
   }
   .banner-sub {
     height: 350px;
+  }
+  .section-featured:after {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
+  .section-scoop:before {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
   }
 }
 @media (max-height: 768px) {
@@ -9751,6 +9799,11 @@ ul li a {
     width: 100%;
     font-size: 16px;
     display: block;
+  }
+  .form-inline .form-control {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
   }
 }
 @media screen and (max-width: 782px) {
@@ -9803,6 +9856,12 @@ ul li a {
     margin: 0 auto;
     top: -25px;
   }
+  .circle-black {
+    bottom: -181px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 600px) {
   .logged-in .mobile-nav {
@@ -9810,6 +9869,14 @@ ul li a {
   }
   .logged-in .navbar-animated {
     top: 0;
+  }
+}
+@media (max-width: 575px) {
+  .banner-title {
+    margin: 0 0 15px;
+  }
+  title {
+    font-size: 40px;
   }
 }
 @media (max-width: 551px) {
@@ -9825,6 +9892,10 @@ ul li a {
     margin-right: 15px;
     padding: 20px;
     font-size: 15px;
+  }
+  .circle-bordered-gray2,
+  .circle-bordered-orange1 {
+    display: none;
   }
 }
 @media (max-width: 480px) {
@@ -9870,5 +9941,80 @@ ul li a {
   }
   .travel-grid-item {
     padding-bottom: 2em;
+  }
+  .description p {
+    font-size: 15px;
+  }
+  .join-wrap .item-img {
+    display: none;
+  }
+  .join-wrap .item-caption {
+    width: 100%;
+  }
+  .join-wrap .item-caption:before {
+    display: none;
+  }
+  .banner {
+    height: 800px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .banner .banner-caption img {
+    width: 80%;
+  }
+  .banner .banner-caption .description p {
+    font-size: 12px;
+  }
+  .btn-mw {
+    min-width: 175px;
+    padding: 15px 20px;
+  }
+  .banner .banner-caption ul li {
+    font-size: 10px;
+    padding: 5px;
+    display: block;
+  }
+  .section-featured .description p {
+    font-size: 20px;
+  }
+  .big-circle {
+    height: 250px;
+    width: 250px;
+  }
+  .logo-list li .logo-item p {
+    padding: 25px 80px;
+  }
+  .logo-list li .platinum-logo p {
+    padding: 25px 76px;
+  }
+  .banner-sub {
+    height: 300px;
+  }
+  .banner-sub .banner-caption {
+    top: 60%;
+  }
+  .copy ul {
+    padding-left: 1em;
+  }
+  .circle-number {
+    font-size: 20px;
+    height: 50px;
+    line-height: 0;
+    width: 50px;
+    padding: 25px 0;
+  }
+  .section-happened .content-right .description p {
+    padding-left: 0;
+    margin: 14px 0;
+  }
+  .section-happened .content-right .description1 p {
+    margin: 13px 0;
+  }
+  .section-happened .content-right .description .circle-number {
+    display: none;
+  }
+  .section-info .grid-info .grid-info-item .description {
+    margin-bottom: 1em;
   }
 }

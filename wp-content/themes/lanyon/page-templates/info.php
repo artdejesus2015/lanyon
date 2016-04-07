@@ -171,12 +171,12 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
                             <div class="description">
                                 <div class="circle-number">2</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                <p>Share your favorite education topic </p>
                             </div>
 
                             <div class="description">
                                 <div class="circle-number">3</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                <p>Who’s your favorite speaker?</p>
                             </div>
                         </div>
                     </div>

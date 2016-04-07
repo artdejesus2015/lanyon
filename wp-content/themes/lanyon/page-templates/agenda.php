@@ -166,52 +166,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         </div>
     </section>
 
-    <?php if (get_field('show_schedule_at_a_glance_section')): ?>
-        <section>
-            <div class="section bg-blue text-center section-schedule animatedParent">
-                <div class="container">
-                    <div class="schedule-grid">
 
-                        <div class="schedule-grid-line animated"></div>
-
-                        <div class="circle-white animated fadeInUpShort delay-250">
-                            <p><?php the_field('section_title_schedule', 'option'); ?></p>
-                        </div>
-
-                        <?php
-                        $cntr = 1;
-                        $delay_cntr = 2;
-
-                        if( have_rows('list_of_schedules', 'option') ):
-                            while ( have_rows('list_of_schedules', 'option') ) : the_row();
-                                $scheduled = get_sub_field('schedule_date', 'option');
-                                $schedule_desc = get_sub_field('schedule_description', 'option'); ?>
-
-                                <div class="schedule-grid-item animated fadeInUpShort delay-<?php echo $delay_cntr * 250; ?>">
-                                    <div class="<?php echo ($cntr % 2) ? 'pull-right' : 'pull-left'; ?> schedule-grid-description">
-                                        <div class="schedule-description">
-                                            <h4 class="schedule-date"><?php echo $scheduled; ?></h4>
-                                            <div class="description">
-                                                <?php echo $schedule_desc; ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <?php $delay_cntr++; $cntr++; endwhile; endif;  ?>
-
-
-
-                        <a href="travel.php" class="circle-black">
-                            <p>Travel Info</p>
-                            <p class="small-letters">click here</p>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php endif; ?>
 
     <section>
         <div class="section text-center section-join animatedParent animateOnce" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">
