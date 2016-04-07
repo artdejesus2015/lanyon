@@ -29,7 +29,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 <?php $dates = DateTime::createFromFormat('Ymd', get_field('time')); ?>
                 <p class="green-date animated fadeIn delay-250">dallas, texas  |  <?php echo $dates->format('F j Y'); ?></p>
 
-                <div class="description animated fadeIn delay-750">
+                <div class="description copy animated fadeIn delay-750">
 
                     <h3 class="content-title">More information:</h3>
 
