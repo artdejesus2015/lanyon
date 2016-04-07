@@ -192,10 +192,10 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     <section>
         <div class="section text-center section-scoop animatedParent">
             <div class="container">
-                <h2 class="title section-title animated fadeInDownShort">Get the Latest Scoop</h2>
+                <h2 class="title section-title animated fadeInDownShort"><?php the_field('subscription_title', 'option');?></h2>
 
                 <div class="description animated fadeIn delay-250">
-                    <p>Sign up to get the latest news, special deals,  and updates on Lanyon Live</p>
+                    <?php the_field('subscription_description', 'option');?>
                 </div>
 
                 <div class="form-inline animated fadeIn delay-500">
@@ -204,7 +204,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
                         </div>
-                        <button type="submit" class="btn btn-primary">register now</button>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
                 </div>
 

@@ -2,22 +2,20 @@
 get_header();
 ?>
 
-<div class="banner banner-home animatedParent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">
+<div class="banner banner-home animatedParent" style="background-image: url('<?php the_field('banner_image_home', 'option') ?>');">
     <div class="banner-caption">
-        <h1 class="title banner-title animated fadeInDownShort delay-250">Lanyon Live</h1>
-        <img class="banner-cap-img animated fadeIn" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Year.png">
+        <h1 class="title banner-title animated fadeInDownShort delay-250"><?php the_field('banner_title_home', 'option') ?></h1>
+        <img class="banner-cap-img animated fadeIn" src="<?php the_field('banner_year_image_home', 'option') ?>">
         <ul class="animated fadeInUpShort delay-500">
-            <li>october 25-27</li>
-            <li>Expert Speakers</li>
-            <li>Breakout Sessions</li>
-            <li>Networking</li>
+            <?php if( have_rows('banner_list_home', 'option') ):
+                    while ( have_rows('banner_list_home', 'option') ) : the_row();
+                        $bannerl_item = get_sub_field('banner_list_item_home', 'option'); ?>
+                        <li><?php echo $bannerl_item?></li>
+             <?php endwhile; endif;  ?>
         </ul>
 
         <div class="description animated fadeIn delay-750">
-            <p>Lanyon Live will feature informative, inspirational speeches from some of the industry’s leading minds and
-                most compelling personalities. You’ll hear about the latest trends in the meetings, events, travel and
-                hotel industries – while picking up best practices that will inspire your work in the years to come.
-            </p>
+            <?php the_field('banner_description_home', 'option'); ?>
         </div>
 
         <div class="button-wrap animated fadeIn delay-1000">
@@ -36,7 +34,7 @@ get_header();
 <section>
     <div class="section bg-blue text-center section-featured animatedParent" id="down">
         <div class="container">
-            <h2 class="title section-title small-title featured-title animated fadeInDownShort">featured news</h2>
+            <h2 class="title section-title small-title featured-title animated fadeInDownShort">Latest & Greatest</h2>
             <div class="description animated fadeInUpShort delay-250">
                 <p>The Education Tracks are now released.</p>
                 <p><a href="#">Click here</a> to check them out!</p>
@@ -48,55 +46,35 @@ get_header();
 <section>
     <div class="section text-center section-attend animatedParent">
         <div class="container">
-            <h2 class="title section-title animated fadeInDownShort">Why Attend</h2>
+            <h2 class="title section-title animated fadeInDownShort"><?php the_field('section_title_attend', 'option'); ?></h2>
             <div class="description animated fadeInUpShort delay-250">
-                <p>Lanyon Live brings together thought leaders, industry pioneers and hundreds of your peers for three exciting days of networking,
-                    idea sharing and learning – proving that we are all <a href="#">#BetterTogether.</a></p>
-
-                <p>Experience over [###] sessions, with content tailored and curated  specifically for you – and learn the latest best practices from
-                    thought leaders within the meetings, events, travel and hotel industries.</p>
-
-                <p>You’ll hear directly from Lanyon execs about where Lanyon is headed in the future, and how the past year has treated us.
-                    See exciting advances in product development all throughout the conference – and gain inspiration for your next event.</p>
+                <?php the_field('description_attend', 'option'); ?>
             </div>
 
             <div class="grid-wrap grid-wrap-attend animated fadeInUpShort delay-500">
                 <ul class="grid-list">
-                    <li>
-                        <div class="grid-item">
-                            <div class="grid-item-img">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/speakers.png">
-                            </div>
-                            <h3 class="grid-title">Expert Speakers</h3>
-                            <div class="description">
-                                <p>Hear from meetings, events and travel industry leaders and inspiring voices.</p>
-                            </div>
-                        </div>
-                    </li>
+                    <?php if( have_rows('grids_attend', 'option') ):
+                        while ( have_rows('grids_attend', 'option') ) : the_row();
+                            $grid_img = get_sub_field('grid_image_attend', 'option');
+                            $grid_title = get_sub_field('grid_title_attend', 'option');
+                            $grid_desc = get_sub_field('grid_description_attend', 'option'); ?>
 
-                    <li>
-                        <div class="grid-item">
-                            <div class="grid-item-img">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sessions.png">
-                            </div>
-                            <h3 class="grid-title">breakout sessions</h3>
-                            <div class="description">
-                                <p>Meet with the industry’s top minds and get new strategies and best practices to do your job better.</p>
-                            </div>
-                        </div>
-                    </li>
+                            <li>
+                                <div class="grid-item">
+                                    <div class="grid-item-img">
+                                        <img src="<?php echo $grid_img; ?>">
+                                    </div>
+                                    <h3 class="grid-title"><?php echo $grid_title; ?></h3>
+                                    <div class="description">
+                                        <p><?php echo $grid_desc; ?></p>
+                                    </div>
+                                </div>
+                            </li>
 
-                    <li>
-                        <div class="grid-item">
-                            <div class="grid-item-img">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/networking.png">
-                            </div>
-                            <h3 class="grid-title">Networking</h3>
-                            <div class="description">
-                                <p>Join the global community of meetings, events and travel professionals.</p>
-                            </div>
-                        </div>
-                    </li>
+                    <?php endwhile; endif;  ?>
+
+
+
                 </ul>
             </div>
         </div>
@@ -109,251 +87,30 @@ get_header();
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner animated fadeInUpShort" role="listbox" id="links">
-                <div class="item active">
-                    <ul>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery1.jpg" title="Gallery1">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery1.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery2.jpg" title="Gallery2">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery2.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery3.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery3.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery4.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery4.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery5.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery5.jpg">
-                            </a>
-                        </li>
 
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery6.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery6.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery7.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery7.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery8.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery8.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery9.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery9.jpg">
-                            </a>
-                        </li>
+                <?php
+                    $cntr = 0;
+                    if( have_rows('list_of_images', 'option') ):
+                    while ( have_rows('list_of_images', 'option') ) : the_row(); ?>
 
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery10.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery10.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery11.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery11.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery12.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery12.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery13.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery13.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery14.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery14.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery15.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery15.jpg">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="item <?php echo ($cntr == 0) ? 'active' : ''; ?>">
+                                <ul>
+                                    <?php $cnt = 1;  if( have_rows('images_item_gallery', 'option') ):
+                                        while ( have_rows('images_item_gallery', 'option') ) : the_row();
+                                            $list_item_img = get_sub_field('images_gallery', 'option');  ?>
 
-                <div class="item">
-                    <ul>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery1.jpg" title="Gallery1">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery1.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery2.jpg" title="Gallery2">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery2.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery3.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery3.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery4.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery4.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery5.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery5.jpg">
-                            </a>
-                        </li>
+                                            <li>
+                                                <a href="<?php echo $list_item_img; ?>" title="Gallery<?php echo $cnt; ?>">
+                                                    <img src="<?php echo $list_item_img; ?>">
+                                                </a>
+                                            </li>
+                                    <?php   $cnt++; endwhile; endif;  ?>
+                                </ul>
+                            </div>
 
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery6.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery6.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery7.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery7.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery8.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery8.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery9.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery9.jpg">
-                            </a>
-                        </li>
+                    <?php $cntr++; endwhile; endif;  ?>
 
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery10.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery10.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery11.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery11.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery12.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery12.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery13.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery13.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery14.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery14.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery15.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery15.jpg">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="item">
-                    <ul>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery1.jpg" title="Gallery1">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery1.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery2.jpg" title="Gallery2">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery2.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery3.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery3.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery4.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery4.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery5.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery5.jpg">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery6.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery6.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery7.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery7.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery8.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery8.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery9.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery9.jpg">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery10.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery10.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery11.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery11.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery12.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery12.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery13.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery13.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery14.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery14.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery15.jpg" title="Gallery3">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/gallery/gallery15.jpg">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
 
             <!-- Controls -->
@@ -379,37 +136,20 @@ get_header();
 <section>
     <div class="section text-center section-conference animatedParent">
         <div class="container">
-            <h2 class="title section-title animated fadeInDownShort">Conference Pass</h2>
-            <h3 class="title section-title-small animated fadeIn delay-250">Register now to get the best price</h3>
+            <h2 class="title section-title animated fadeInDownShort"><?php the_field('section_title_conference', 'option'); ?></h2>
+            <h3 class="title section-title-small animated fadeIn delay-250"><?php the_field('section_sub_title_conference', 'option'); ?></h3>
 
             <div class="circle-wrap">
                 <div class="big-circle">
-                    <p>$399 <span>Now through 6/30/16</span></p>
+                    <p><?php the_field('bubble_price_conference', 'option'); ?> <span><?php the_field('bubble_date_conference', 'option'); ?></span></p>
                 </div>
-
-                <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray1"></div>
-                <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray2"></div>
-                <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray3"></div>
-                <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray4"></div>
-
-                <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray5"></div>
-                <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray6"></div>
-                <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray7"></div>
-                <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray8"></div>
-                <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray9"></div>
-
-                <div class="circle-icon circle-medium circle-bordered circle-bordered-thick circle-bordered-blue circle-bordered-blue1"></div>
-                <div class="circle-icon circle-medium circle-bordered circle-bordered-thick circle-bordered-blue circle-bordered-blue2"></div>
-
-                <div class="circle-icon circle-large circle-bordered circle-bordered-thick circle-bordered-orange circle-bordered-orange1"></div>
-
-                <div class="circle-icon circle-icon-green circle-icon-green1 circle-xlarge"></div>
+                <div class="circle-icon circle-xlarge big-circle-orange circle-bordered-gray2"></div>
+                <div class="circle-icon circle-xlarge big-circle-blue circle-bordered-orange1"></div>
 
             </div>
 
             <div class="description animated fadeIn delay-500">
-                <p>Please refer to your invitation for any special offers.</p>
-                <p>If you have questions, please contact your Lanyon representative.</p>
+                <?php the_field('description_conference', 'option'); ?>
             </div>
 
         </div>
@@ -424,50 +164,32 @@ get_header();
                 <div class="schedule-grid-line animated"></div>
 
                 <div class="circle-white animated fadeInUpShort delay-250">
-                    <p>Schedule at a Glance</p>
+                    <p><?php the_field('section_title_schedule', 'option'); ?></p>
                 </div>
 
-                <div class="schedule-grid-item animated fadeInUpShort delay-750">
-                    <div class="pull-right schedule-grid-description">
-                        <div class="schedule-description">
-                            <h4 class="schedule-date">Tuesday, October 25</h4>
-                            <div class="description">
-                                <p>Welcome Reception & Opening Ceremony</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    $cntr = 1;
+                    $delay_cntr = 2;
 
-                <div class="schedule-grid-item animated fadeInUpShort delay-1250">
-                    <div class="pull-left schedule-grid-description">
-                        <div class="schedule-description">
-                            <h4 class="schedule-date">Wednesday, October 26</h4>
-                            <div class="description">
-                                <p>Breakfast</p>
-                                <p>Opening General Session</p>
-                                <p>Keynote Speaker</p>
-                                <p>Lunch</p>
-                                <p>Breakout Sessions</p>
-                                <p>Special Evening Event</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    if( have_rows('list_of_schedules', 'option') ):
+                        while ( have_rows('list_of_schedules', 'option') ) : the_row();
+                            $scheduled = get_sub_field('schedule_date', 'option');
+                            $schedule_desc = get_sub_field('schedule_description', 'option'); ?>
 
-                <div class="schedule-grid-item animated fadeInUpShort delay-1750">
-                    <div class="pull-right schedule-grid-description">
-                        <div class="schedule-description">
-                            <h4 class="schedule-date">Thursday, October 27</h4>
-                            <div class="description">
-                                <p>Breakfast</p>
-                                <p>Closing General Session</p>
-                                <p>Lunch</p>
-                                <p>Breakout Sessions</p>
-                                <p>Awards Ceremony</p>
+                            <div class="schedule-grid-item animated fadeInUpShort delay-<?php echo $delay_cntr * 250; ?>">
+                                <div class="<?php echo ($cntr % 2) ? 'pull-right' : 'pull-left'; ?> schedule-grid-description">
+                                    <div class="schedule-description">
+                                        <h4 class="schedule-date"><?php echo $scheduled; ?></h4>
+                                        <div class="description">
+                                            <?php echo $schedule_desc; ?>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+
+                <?php $delay_cntr++; $cntr++; endwhile; endif;  ?>
+
+
 
                 <a href="travel.php" class="circle-black">
                     <p>Travel Info</p>
@@ -482,16 +204,6 @@ get_header();
 <section>
     <div class="section text-center section-sponsorship animatedParent">
         <div class="container">
-            <div class="diamond-wrap">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond.png" class="diamond1">
-
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark1">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark2">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark3">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark4">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark5">
-
-            </div>
             <h2 class="title section-title animated fadeInDownShort">Sponsorship plays a major role in the success of our event.</h2>
 
             <div class="description animated fadeIn delay-250">
@@ -510,84 +222,12 @@ get_header();
                         <div class="logo-item platinum-logo">
                             <p>Platinum Logo</p>
                         </div>
-                        <div class="logo-item platinum-logo">
-                            <p>Platinum Logo</p>
-                        </div>
-                        <div class="logo-item platinum-logo">
-                            <p>Platinum Logo</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="logo-item gold-logo">
-                            <p>Gold Logo</p>
-                        </div>
-                        <div class="logo-item gold-logo">
-                            <p>Gold Logo</p>
-                        </div>
-                        <div class="logo-item gold-logo">
-                            <p>Gold Logo</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="logo-item silver-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item silver-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
-                        <div class="logo-item bronze-logo">
-                            <p>Silver Logo</p>
-                        </div>
                     </li>
 
                 </ul>
             </div>
 
-            <a href="#" class="btn btn-primary">Become A Sponsor</a>
+            <a href="mailto:robin.rankin@lanyon.com" class="btn btn-primary">Become A Sponsor</a>
         </div>
     </div>
 </section>
@@ -600,92 +240,52 @@ get_header();
 
                 <div class="join-wrap animated fadeInDownShort">
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                        </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <div class="item-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-carousel1.jpg')"></div>
-                                <div class="item-caption">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/qoute.png" class="qoute-img">
-                                    <div class="description">
-                                        <p>I loved the diversity of educational sessions</p>
+
+                            <?php
+                                $cntr = 0;
+                                    $residential_slider =  array(
+                                        'post_type' => 'testimonials',
+                                        'post_status' => 'publish',
+                                        'orderby' => 'id',
+                                        'order' => 'asc',
+                                        'posts_per_page' => -1);
+
+                                    $the_query = new WP_Query( $residential_slider );
+                                    while ( $the_query->have_posts() ) :$the_query->the_post();
+                                        $img_item = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );?>
+
+                                <div class="item <?php echo ($cntr == 0) ? 'active' : ''; ?>">
+                                    <div class="item-img" style="background-image: url('<?php echo $img_item[0]; ?>')"></div>
+                                    <div class="item-caption">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/qoute.png" class="qoute-img">
+                                        <div class="description">
+                                            <?php the_content(); ?>
+                                        </div>
+
+                                        <p class="author-name"><?php the_title(); ?></p>
+                                        <p class="author-title"><?php the_field('author_job_title'); ?></p>
                                     </div>
-
-                                    <p class="author-name">Dorian Stone</p>
-                                    <p class="author-title">Salesforce</p>
                                 </div>
-                            </div>
 
-                            <div class="item">
-                                <div class="item-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-carousel1.jpg')"></div>
-                                <div class="item-caption">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/qoute.png" class="qoute-img">
-                                    <div class="description">
-                                        <p>I liked the quality of the educational sessions…there was a commitment to customers and the end users…I will happily return next year.</p>
-                                    </div>
+                            <?php   $cntr++; endwhile; ?>
 
-                                    <p class="author-name">Brenda Miller</p>
-                                    <p class="author-title">CWT</p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="item-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-carousel1.jpg')"></div>
-                                <div class="item-caption">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/qoute.png" class="qoute-img">
-                                    <div class="description">
-                                        <p>The mobile app was good to use</p>
-                                    </div>
-
-                                    <p class="author-name">Rebecca Hasley</p>
-                                    <p class="author-title">Johnson Controls</p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="item-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-carousel1.jpg')"></div>
-                                <div class="item-caption">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/qoute.png" class="qoute-img">
-                                    <div class="description">
-                                        <p>I really enjoyed it…it was good to get to know my Lanyon contacts. I’m looking forward to returning next year.</p>
-                                    </div>
-
-                                    <p class="author-name">Rebecca Hasley</p>
-                                    <p class="author-title">Johnson Controls</p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="item-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/join-carousel1.jpg')"></div>
-                                <div class="item-caption">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/qoute.png" class="qoute-img">
-                                    <div class="description">
-                                        <p>Lanyon Live is great…it exceeded my expectations.</p>
-                                    </div>
-
-                                    <p class="author-name">Charlotte Hammerbeck</p>
-                                    <p class="author-title">GSK</p>
-                                </div>
-                            </div>
-
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <?php for ( $i = 0; $i < $cntr; $i++ ): ?>
+                                    <li data-target="#carousel-example-generic" data-slide-to="<?php echo $i ?>" class="<?php echo ($i == 0) ? 'active' : '' ?>"></li>
+                                <?php endfor; ?>
+                            </ol>
                         </div>
                     </div>
                 </div>
-                <img class="img-join animated fadeIn delay-250" src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-icon.png">
                 <div class="description animated fadeIn delay-500">
-                    <p>Join us on this incredible journey — and give us the chance
-                        to show you that we’re indeed Better Together.</p>
+                    <?php the_field('registration_cta', 'option'); ?>
                 </div>
 
-                <a href="#" class="btn btn-primary">register now</a>
+                <a href="<?php the_field('registration_cta_link', 'option'); ?>" class="btn btn-primary">register now</a>
             </div>
 
 
@@ -697,10 +297,10 @@ get_header();
 <section>
     <div class="section text-center section-scoop animatedParent">
         <div class="container">
-            <h2 class="title section-title animated fadeInDownShort">Get the Latest Scoop</h2>
+            <h2 class="title section-title animated fadeInDownShort"><?php the_field('subscription_title', 'option');?></h2>
 
             <div class="description animated fadeIn delay-250">
-                <p>Sign up to get the latest news, special deals,  and updates on Lanyon Live</p>
+                <?php the_field('subscription_description', 'option');?>
             </div>
 
             <div class="form-inline animated fadeIn delay-500">
@@ -709,7 +309,7 @@ get_header();
                         <label class="sr-only" for="exampleInputEmail3">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
                     </div>
-                    <button type="submit" class="btn btn-primary">register now</button>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
             </div>
 

@@ -15,16 +15,19 @@
 
 
 
+<?php if(get_field('video_link', 'option')): ?>
 <!-- Modal -->
 <div class="modal modal-video2015 fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Pl_dlzf5UgY" frameborder="0" allowfullscreen=""></iframe>
+                <iframe width="560" height="315" src="<?php the_field('video_link', 'option'); ?>" frameborder="0" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>
 </div>
+
+<?php endif; ?>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

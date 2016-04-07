@@ -101,13 +101,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         <div class="section text-center section-join animatedParent animateOnce" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">
             <div class="container">
                 <div class="view-wrapper">
-                    <img class="img-join animated fadeInDownShort" src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-icon.png">
-                    <div class="description animated fadeIn delay-250">
-                        <p>Join us on this incredible journey — and give us the chance
-                            to show you that we’re indeed Better Together.</p>
+                    <div class="description animated fadeIn delay-500">
+                        <?php the_field('registration_cta', 'option'); ?>
                     </div>
 
-                    <a href="#" class="btn btn-primary animated fadeInUpShort delay-500">register now</a>
+                    <a href="<?php the_field('registration_cta_link', 'option'); ?>" class="btn btn-primary">register now</a>
                 </div>
             </div>
         </div>
@@ -115,21 +113,21 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 
     <section>
-        <div class="section text-center section-scoop animatedParent animateOnce">
+        <div class="section text-center section-scoop animatedParent">
             <div class="container">
-                <h2 class="title section-title animated fadeInDownShort">Get the Latest Scoop</h2>
+                <h2 class="title section-title animated fadeInDownShort"><?php the_field('subscription_title', 'option');?></h2>
 
                 <div class="description animated fadeIn delay-250">
-                    <p>Sign up to get the latest news, special deals,  and updates on Lanyon Live</p>
+                    <?php the_field('subscription_description', 'option');?>
                 </div>
 
-                <div class="form-inline animated fadeInUpShort delay-500">
+                <div class="form-inline animated fadeIn delay-500">
                     <form>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
                         </div>
-                        <button type="submit" class="btn btn-primary">register now</button>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
                 </div>
 

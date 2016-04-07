@@ -209,7 +209,9 @@
     width: 100%;
     border: none;
     line-height: 0;
-    padding-top: 15px;
+    padding: 15px;
+    outline: none !important;
+
   }
 
   .menu-main-menu-container {
@@ -228,6 +230,8 @@
       float: none;
 
       a {
+        border-color: #0F7DDC;
+
         &:hover, &:focus {
           background-color: #0F7DDC;
           color: #fff;
@@ -238,6 +242,12 @@
         a {
           background-color: #0F7DDC;
           color: #fff;
+        }
+      }
+
+      &:first-child {
+        a {
+          border-top: 1px solid #0F7DDC;
         }
       }
     }

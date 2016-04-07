@@ -42,7 +42,7 @@
         });
 
         // Gallery Carousel
-        $('.carousel').carousel({
+        $('.carousel-gallery').carousel({
             interval: false
         })
 

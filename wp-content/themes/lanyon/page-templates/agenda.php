@@ -64,6 +64,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             </div>
         </div>
     </section>
+
+
+
     <section>
         <div class="section text-center section-proposal animatedParent animateOnce">
             <div class="container">
@@ -121,17 +124,61 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="section bg-blue text-center section-schedule animatedParent">
+            <div class="container">
+                <div class="schedule-grid">
+
+                    <div class="schedule-grid-line animated"></div>
+
+                    <div class="circle-white animated fadeInUpShort delay-250">
+                        <p><?php the_field('section_title_schedule', 'option'); ?></p>
+                    </div>
+
+                    <?php
+                    $cntr = 1;
+                    $delay_cntr = 2;
+
+                    if( have_rows('list_of_schedules', 'option') ):
+                        while ( have_rows('list_of_schedules', 'option') ) : the_row();
+                            $scheduled = get_sub_field('schedule_date', 'option');
+                            $schedule_desc = get_sub_field('schedule_description', 'option'); ?>
+
+                            <div class="schedule-grid-item animated fadeInUpShort delay-<?php echo $delay_cntr * 250; ?>">
+                                <div class="<?php echo ($cntr % 2) ? 'pull-right' : 'pull-left'; ?> schedule-grid-description">
+                                    <div class="schedule-description">
+                                        <h4 class="schedule-date"><?php echo $scheduled; ?></h4>
+                                        <div class="description">
+                                            <?php echo $schedule_desc; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <?php $delay_cntr++; $cntr++; endwhile; endif;  ?>
+
+
+
+                    <a href="travel.php" class="circle-black">
+                        <p>Travel Info</p>
+                        <p class="small-letters">click here</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section>
         <div class="section text-center section-join animatedParent animateOnce" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">
             <div class="container">
                 <div class="view-wrapper">
-                    <img class="img-join animated fadeInDownShort" src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-icon.png">
-                    <div class="description animated fadeIn delay-250">
-                        <p>Join us on this incredible journey — and give us the chance
-                            to show you that we’re indeed Better Together.</p>
+                    <div class="description animated fadeIn delay-500">
+                        <?php the_field('registration_cta', 'option'); ?>
                     </div>
 
-                    <a href="#" class="btn btn-primary animated fadeInUpShort delay-500">register now</a>
+                    <a href="<?php the_field('registration_cta_link', 'option'); ?>" class="btn btn-primary">register now</a>
                 </div>
             </div>
         </div>
@@ -139,21 +186,21 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 
     <section>
-        <div class="section text-center section-scoop animatedParent animateOnce">
+        <div class="section text-center section-scoop animatedParent">
             <div class="container">
-                <h2 class="title section-title animated fadeInDownShort">Get the Latest Scoop</h2>
+                <h2 class="title section-title animated fadeInDownShort"><?php the_field('subscription_title', 'option');?></h2>
 
                 <div class="description animated fadeIn delay-250">
-                    <p>Sign up to get the latest news, special deals,  and updates on Lanyon Live</p>
+                    <?php the_field('subscription_description', 'option');?>
                 </div>
 
-                <div class="form-inline animated fadeInUpShort delay-500">
+                <div class="form-inline animated fadeIn delay-500">
                     <form>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
                         </div>
-                        <button type="submit" class="btn btn-primary">register now</button>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
                 </div>
 
