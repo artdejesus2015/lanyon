@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Agenda Page
+ * Template Name: Agenda
  */
 
 get_header();
