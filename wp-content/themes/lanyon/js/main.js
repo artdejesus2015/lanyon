@@ -19,7 +19,7 @@
         });
 
         $(".menu-toggle").click(function() {
-            $(this).removeClass("active");
+            $('.navbar-menu-toggle').removeClass("active");
             $('body').removeClass("cbp-spmenu-push-toleft");
             $('.mobile-nav').removeClass("cbp-spmenu-open");
         });
