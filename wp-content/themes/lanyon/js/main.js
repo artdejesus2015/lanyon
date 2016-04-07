@@ -1,6 +1,24 @@
+function isIE() {
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer, return version number
+        return true;
+    else                 // If another browser, return 0
+        return false;
+
+    return false;
+}
 
 (function(window, document, $) {
     'use strict';
+
+    if(isIE() || navigator.userAgent.match(/Windows Phone/i) || (/Edge\/12./i.test(navigator.userAgent)) || (/Edge\/13./i.test(navigator.userAgent)) || (/Edge\/14./i.test(navigator.userAgent))){
+
+        jQuery('body').addClass('IEbrowser');
+
+    }
         $(window).scroll(function() {
             if ($(this).scrollTop() > 1){
                 $('.navbar-menu').addClass('navbar-animated');
