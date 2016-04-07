@@ -8,7 +8,7 @@ get_header();
 global $post;
 $post_slug=$post->post_name;
 
-$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
+$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner_bg', false, '' );
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
     ?>
@@ -62,7 +62,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                         query_posts(array(
                                 'post_type' => 'faqs',
                                 'posts_per_page' => 20,
-                                'order'        => ASC,
+                                'order'        => 'asc'
                         ));
                         if ( have_posts() ) : ?>
                             <?php $cntr = 0; while(have_posts()) : the_post(); ?>
@@ -88,37 +88,40 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         </div>
     </section>
 
-    <!--<section>-->
-    <!--    <div class="section text-center section-mobile-app bg-gray">-->
-    <!--        <div class="container">-->
-    <!--            <div class="row">-->
-    <!--                <div class="col-md-6 phone-wrap">-->
-    <!--                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/phone.png" class="phone-left">-->
-    <!--                </div>-->
-    <!---->
-    <!--                <div class="col-md-6 pull-right">-->
-    <!--                    <div class="content">-->
-    <!--                        <h2 class="title section-title section-mini-title">What’s happening</h2>-->
-    <!--                        <div class="description">-->
-    <!--                            <p>Engage, schedule, and network all in the palm of your hand</p>-->
-    <!--                        </div>-->
-    <!---->
-    <!--                        <div class="button-wrap">-->
-    <!--                            <a href="#">-->
-    <!--                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-1.png">-->
-    <!--                            </a>-->
-    <!---->
-    <!--                            <a href="#">-->
-    <!--                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-2.png">-->
-    <!--                            </a>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!---->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</section>-->
+    <?php if(get_field('show_mobiel_app_section')): ?>
+        <section>
+            <div class="section text-center section-mobile-app bg-gray">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 phone-wrap">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/phone.png" class="phone-left">
+                        </div>
+
+                        <div class="col-md-6 pull-right">
+                            <div class="content">
+                                <h2 class="title section-title section-mini-title">What’s happening</h2>
+                                <div class="description">
+                                    <p>Engage, schedule, and network all in the palm of your hand</p>
+                                </div>
+
+                                <div class="button-wrap">
+                                    <a href="#">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-1.png">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn-2.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
 
     <section>
         <div class="section text-center section-happened">

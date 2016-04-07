@@ -21,8 +21,6 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-add_theme_support( 'title-tag' );
-
 function excerpt($limit) {
     $excerpt = explode(' ', get_the_excerpt(), $limit);
     if (count($excerpt)>=$limit) {
@@ -98,3 +96,9 @@ function my_custom_post_testimonials() {
     register_post_type( 'testimonials', $args );
 }
 add_action( 'init', 'my_custom_post_testimonials' );
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'banner_bg', 1800);
+    add_image_size( 'gallery_img', 1000, 667);
+}

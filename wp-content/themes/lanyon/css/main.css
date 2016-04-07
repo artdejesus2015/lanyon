@@ -7070,6 +7070,16 @@ ul li a {
   background-color: #00c4b3;
   margin-right: 1em;
 }
+.btn-green:hover,
+.btn-green:focus {
+  background-color: #00c4b3;
+}
+.btn-green:before {
+  background-color: #00deca;
+}
+.btn-green:after {
+  background-color: #00f7e2;
+}
 .btn-book-now {
   margin-bottom: 1em;
 }
@@ -7485,10 +7495,10 @@ ul li a {
   padding-bottom: 4em;
 }
 .logo-list li {
-  display: inline-block;
+  display: block;
 }
 .logo-list li .logo-item {
-  display: block;
+  display: inline-block;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -9036,7 +9046,7 @@ ul li a {
   margin-bottom: 2em;
 }
 .section-join .description p {
-  font-size: 36px;
+  font-size: 40px;
   color: #ffffff;
 }
 .section-join .img-join {
@@ -9482,6 +9492,12 @@ ul li a {
 }
 .section-travel {
   padding-bottom: 0;
+}
+.section-sponsor .section-title {
+  max-width: 900px;
+}
+.section-sponsor .description {
+  max-width: 690px;
 }
 .footer {
   padding: 80px 0;

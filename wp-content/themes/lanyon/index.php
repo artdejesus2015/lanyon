@@ -1,8 +1,15 @@
 <?php
 get_header();
+
+$banner_bg = get_field('banner_image_home', 'option');
+
+// thumbnail
+$banner_size = 'banner_bg';
+$banner_thumb = $banner_bg ['sizes'][ $banner_size ];
+
 ?>
 
-<div class="banner banner-home animatedParent" style="background-image: url('<?php the_field('banner_image_home', 'option') ?>');">
+<div class="banner banner-home animatedParent" style="background-image: url('<?php echo $banner_thumb;?>');">
     <div class="banner-caption">
         <h1 class="title banner-title animated fadeInDownShort delay-250"><?php the_field('banner_title_home', 'option') ?></h1>
         <img class="banner-cap-img animated fadeIn" src="<?php the_field('banner_year_image_home', 'option') ?>">
@@ -97,11 +104,16 @@ get_header();
                                 <ul>
                                     <?php $cnt = 1;  if( have_rows('images_item_gallery', 'option') ):
                                         while ( have_rows('images_item_gallery', 'option') ) : the_row();
-                                            $list_item_img = get_sub_field('images_gallery', 'option');  ?>
+                                            $list_item_img = get_sub_field('images_gallery', 'option');
+
+                                            // Image Size To be Used
+                                            $gallery_size = 'gallery_img'; // you can replace the value with 'large, medium, thumbnail or full'
+                                            $gallery_thumb = $list_item_img ['sizes'][ $gallery_size ];
+                                            ?>
 
                                             <li>
-                                                <a href="<?php echo $list_item_img; ?>" title="Gallery<?php echo $cnt; ?>">
-                                                    <img src="<?php echo $list_item_img; ?>">
+                                                <a href="<?php echo $gallery_thumb; ?>" title="Gallery<?php echo $cnt; ?>">
+                                                    <img src="<?php echo $gallery_thumb; ?>">
                                                 </a>
                                             </li>
                                     <?php   $cnt++; endwhile; endif;  ?>
@@ -204,30 +216,33 @@ get_header();
 <section>
     <div class="section text-center section-sponsorship animatedParent">
         <div class="container">
-            <h2 class="title section-title animated fadeInDownShort">Sponsorship plays a major role in the success of our event.</h2>
+            <h2 class="title section-title animated fadeInDownShort"><?php the_field('section_title_sponsor', 'option'); ?></h2>
 
             <div class="description animated fadeIn delay-250">
-                <p>Get your name and your brand seen by leaders and decision-makers in the meetings, events, travel and hospitality industries. <a href="#">Contact us</a> to be a Lanyon Live 2016 Sponsor!</p>
+                <?php the_field('description_sponsor', 'option'); ?>
             </div>
 
             <div class="logo-wrap animated fadeInUpShort delay-500">
                 <ul class="logo-list">
                     <li>
                         <div class="logo-item diamond-logo">
-                            <p>Diamond Logo</p>
+                            <p>Diamond</p>
+                        </div>
+                        <div class="logo-item diamond-logo">
+                            <p>Diamond</p>
                         </div>
                     </li>
 
                     <li>
                         <div class="logo-item platinum-logo">
-                            <p>Platinum Logo</p>
+                            <p>Platinum</p>
                         </div>
                     </li>
 
                 </ul>
             </div>
 
-            <a href="mailto:robin.rankin@lanyon.com" class="btn btn-primary">Become A Sponsor</a>
+            <a href="mailto:<?php the_field('button_link_sponsor', 'option') ?>" class="btn btn-primary"><?php the_field('button_label_sponsor', 'option') ?></a>
         </div>
     </div>
 </section>

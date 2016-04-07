@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Agenda Page
+ * Template Name: Agenda
  */
 
 get_header();
@@ -32,7 +32,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     query_posts(array(
                             'post_type' => 'post',
                             'posts_per_page' => 3,
-                            'order'        => ASC,
+                            'order'        => 'asc'
                     ));
                     if ( have_posts() ) : ?>
                         <ul>
@@ -53,6 +53,54 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             </div>
         </div>
     </section>
+
+    <?php if (get_field('show_schedule_at_a_glance_section')): ?>
+        <section>
+            <div class="section bg-blue text-center section-schedule animatedParent">
+                <div class="container">
+                    <div class="schedule-grid">
+
+                        <div class="schedule-grid-line animated"></div>
+
+                        <div class="circle-white animated fadeInUpShort delay-250">
+                            <p><?php the_field('section_title_schedule', 'option'); ?></p>
+                        </div>
+
+                        <?php
+                        $cntr = 1;
+                        $delay_cntr = 2;
+
+                        if( have_rows('list_of_schedules', 'option') ):
+                            while ( have_rows('list_of_schedules', 'option') ) : the_row();
+                                $scheduled = get_sub_field('schedule_date', 'option');
+                                $schedule_desc = get_sub_field('schedule_description', 'option'); ?>
+
+                                <div class="schedule-grid-item animated fadeInUpShort delay-<?php echo $delay_cntr * 250; ?>">
+                                    <div class="<?php echo ($cntr % 2) ? 'pull-right' : 'pull-left'; ?> schedule-grid-description">
+                                        <div class="schedule-description">
+                                            <h4 class="schedule-date"><?php echo $scheduled; ?></h4>
+                                            <div class="description">
+                                                <?php echo $schedule_desc; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <?php $delay_cntr++; $cntr++; endwhile; endif;  ?>
+
+
+
+                        <a href="travel.php" class="circle-black">
+                            <p>Travel Info</p>
+                            <p class="small-letters">click here</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
     <section>
         <div class="banner banner-sub banner-subcontent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-agenda-sub.jpg');">
             <div class="banner-caption animatedParent animateOnce">
@@ -71,7 +119,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         <div class="section text-center section-proposal animatedParent animateOnce">
             <div class="container">
                 <h2 class="title section-title animated fadeInDownShort">Call for Proposals</h2>
-<!--                <p class="green-date animated fadeIn delay-250">dallas, texas  |   october 25-27, 2016</p>-->
                 <p class="deadline-text animated fadeIn delay-500">May 1, 2016</p>
 
                 <div class="description copy animated fadeIn delay-750">
@@ -115,60 +162,56 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <p>If you have questions, please contact LanyonLive@Lanyon.com. </p>
 
                 </div>
-
-<!--                <div class="btn-holder">-->
-<!--                    <a href="#" class="btn btn-primary">submit to speak</a>-->
-<!--                    <div class="gap-20"></div>-->
-<!--                    <p>Deadline is May 30th</p>-->
-<!--                </div>-->
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="section bg-blue text-center section-schedule animatedParent">
-            <div class="container">
-                <div class="schedule-grid">
+    <?php if (get_field('show_schedule_at_a_glance_section')): ?>
+        <section>
+            <div class="section bg-blue text-center section-schedule animatedParent">
+                <div class="container">
+                    <div class="schedule-grid">
 
-                    <div class="schedule-grid-line animated"></div>
+                        <div class="schedule-grid-line animated"></div>
 
-                    <div class="circle-white animated fadeInUpShort delay-250">
-                        <p><?php the_field('section_title_schedule', 'option'); ?></p>
-                    </div>
+                        <div class="circle-white animated fadeInUpShort delay-250">
+                            <p><?php the_field('section_title_schedule', 'option'); ?></p>
+                        </div>
 
-                    <?php
-                    $cntr = 1;
-                    $delay_cntr = 2;
+                        <?php
+                        $cntr = 1;
+                        $delay_cntr = 2;
 
-                    if( have_rows('list_of_schedules', 'option') ):
-                        while ( have_rows('list_of_schedules', 'option') ) : the_row();
-                            $scheduled = get_sub_field('schedule_date', 'option');
-                            $schedule_desc = get_sub_field('schedule_description', 'option'); ?>
+                        if( have_rows('list_of_schedules', 'option') ):
+                            while ( have_rows('list_of_schedules', 'option') ) : the_row();
+                                $scheduled = get_sub_field('schedule_date', 'option');
+                                $schedule_desc = get_sub_field('schedule_description', 'option'); ?>
 
-                            <div class="schedule-grid-item animated fadeInUpShort delay-<?php echo $delay_cntr * 250; ?>">
-                                <div class="<?php echo ($cntr % 2) ? 'pull-right' : 'pull-left'; ?> schedule-grid-description">
-                                    <div class="schedule-description">
-                                        <h4 class="schedule-date"><?php echo $scheduled; ?></h4>
-                                        <div class="description">
-                                            <?php echo $schedule_desc; ?>
+                                <div class="schedule-grid-item animated fadeInUpShort delay-<?php echo $delay_cntr * 250; ?>">
+                                    <div class="<?php echo ($cntr % 2) ? 'pull-right' : 'pull-left'; ?> schedule-grid-description">
+                                        <div class="schedule-description">
+                                            <h4 class="schedule-date"><?php echo $scheduled; ?></h4>
+                                            <div class="description">
+                                                <?php echo $schedule_desc; ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <?php $delay_cntr++; $cntr++; endwhile; endif;  ?>
-
+                                <?php $delay_cntr++; $cntr++; endwhile; endif;  ?>
 
 
-                    <a href="travel.php" class="circle-black">
-                        <p>Travel Info</p>
-                        <p class="small-letters">click here</p>
-                    </a>
 
+                        <a href="travel.php" class="circle-black">
+                            <p>Travel Info</p>
+                            <p class="small-letters">click here</p>
+                        </a>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <?php endif; ?>
 
     <section>
         <div class="section text-center section-join animatedParent animateOnce" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">

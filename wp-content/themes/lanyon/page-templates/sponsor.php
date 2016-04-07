@@ -8,7 +8,7 @@ get_header();
 global $post;
 $post_slug=$post->post_name;
 
-$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
+$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner_bg', false, '' );
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
     ?>
@@ -23,23 +23,13 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 
     <section>
-        <div class="section-sponsor text-center">
+        <div class="section-sponsor text-center animatedParent animateOnce">
             <div class="gap-20"></div>
             <div class="container">
-                <div class="diamond-wrap">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond.png" class="diamond1">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark1">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark2">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark3">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark4">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diamond-spark.png" class="diamond-spark diamond-spark5">
-                </div>
-                <div class="animatedParent animateOnce">
-                    <h2 class="title section-title animated fadeInDownShort"><?php the_field('content_title');?></h2>
+                <h2 class="title section-title animated fadeInDownShort"><?php the_field('section_title_sponsor', 'option'); ?></h2>
 
-                    <div class="description animated fadeIn delay-250">
-                        <p><?php the_field('content_description'); ?></p>
-                    </div>
+                <div class="description animated fadeIn delay-250">
+                    <?php the_field('description_sponsor', 'option'); ?>
                 </div>
             </div>
         </div>
@@ -50,49 +40,22 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="logo-wrap sponsors-logo-wrap animated fadeInUpShort delay-500">
                 <ul class="logo-list">
                     <li>
-                        <?php while (have_rows('diamond_logo')): the_row(); ?>
-                            <div class="logo-item diamond-logo">
-                                <p><?php the_sub_field('logo'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
+                        <div class="logo-item diamond-logo">
+                            <p>Diamond</p>
+                        </div>
+                        <div class="logo-item diamond-logo">
+                            <p>Diamond</p>
+                        </div>
                     </li>
 
                     <li>
-                        <?php while (have_rows('platinum_logo')): the_row(); ?>
-                            <div class="logo-item platinum-logo">
-                                <p><?php the_sub_field('logo_1'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
+                        <div class="logo-item platinum-logo">
+                            <p>Platinum</p>
+                        </div>
                     </li>
-
-                    <li>
-                        <?php while (have_rows('gold_logo')): the_row(); ?>
-                            <div class="logo-item gold-logo">
-                                <p><?php the_sub_field('logo_2'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
-                    </li>
-
-                    <li>
-                        <?php while (have_rows('silver_logo')): the_row(); ?>
-                            <div class="logo-item silver-logo">
-                                <p><?php the_sub_field('logo_3'); ?></p>
-                            </div>
-                        <?php endwhile; ?>
-                    </li>
-
-                    <?php while (have_rows('bronze_logo')): the_row(); ?>
-                        <li>
-                            <?php while (have_rows('logo_4')): the_row(); ?>
-                                <div class="logo-item bronze-logo">
-                                    <p><?php the_sub_field('logo_5'); ?></p>
-                                </div>
-                            <?php endwhile; ?>
-                        </li>
-                    <?php endwhile; ?>
                 </ul>
-                <a href="<?php echo get_stylesheet_directory_uri(); ?>/images/Lanyon-Live-2016-Sponsor-Exhibitor-Prospectus-FINAL.pdf" target='_blank' class="btn btn-primary btn-green">Download the Prospectus</a>
-                <a href="#" class="btn btn-primary">Contact Us</a>
+                <a href="<?php the_field('button_green_link'); ?>" target='_blank' class="btn btn-primary btn-green"><?php the_field('button_green_label'); ?></a>
+                <a href="<?php the_field('button_blue_link'); ?>" class="btn btn-primary"><?php the_field('button_blue_label'); ?></a>
             </div>
         </div>
     </section>
