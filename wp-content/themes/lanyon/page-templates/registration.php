@@ -33,37 +33,37 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <ul class="grid-conference">
                         <li>
                             <div class="big-circle">
-                                <p>$399 <span>Now</span></p>
+                                <p>$399 <span>Now through 6/30/16</span></p>
                             </div>
                         </li>
 
                         <li>
                             <div class="big-circle big-circle-blue">
-                                <p>$499 <span>MID</span></p>
+                                <p>$499 <span>Now through 6/30/16</span></p>
                             </div>
                         </li>
 
                         <li>
                             <div class="big-circle big-circle-orange">
-                                <p>$599 <span>MID</span></p>
+                                <p>$599 <span>Now through 6/30/16</span></p>
                             </div>
                         </li>
                     </ul>
 
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray1 circle-initial-right"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray2 circle-initial-tright"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray3 circle-initial-tleft"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray4 circle-initial-bleft"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray5"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray6 circle-initial-top"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray7"></div>
-                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray8 circle-initial-tleft"></div>
-
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray9 circle-initial-top"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray10"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray11"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray12"></div>
-                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray13"></div>
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray1 circle-initial-right"></div>-->
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray2 circle-initial-tright"></div>-->
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray3 circle-initial-tleft"></div>-->
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray4 circle-initial-bleft"></div>-->
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray5"></div>-->
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray6 circle-initial-top"></div>-->
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray7"></div>-->
+<!--                    <div class="circle-icon circle-xsmall circle-bordered circle-bordered-gray circle-bordered-gray8 circle-initial-tleft"></div>-->
+<!---->
+<!--                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray9 circle-initial-top"></div>-->
+<!--                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray10"></div>-->
+<!--                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray11"></div>-->
+<!--                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray12"></div>-->
+<!--                    <div class="circle-icon circle-small circle-bordered circle-bordered-thick circle-bordered-gray circle-bordered-gray13"></div>-->
 
 
                 </div>

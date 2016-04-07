@@ -71,8 +71,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         <div class="section text-center section-proposal animatedParent animateOnce">
             <div class="container">
                 <h2 class="title section-title animated fadeInDownShort">Call for Proposals</h2>
-                <p class="green-date animated fadeIn delay-250">dallas, texas  |   october 25-27, 2016</p>
-                <p class="deadline-text animated fadeIn delay-500">Deadline May 1, 2016</p>
+<!--                <p class="green-date animated fadeIn delay-250">dallas, texas  |   october 25-27, 2016</p>-->
+                <p class="deadline-text animated fadeIn delay-500">May 1, 2016</p>
 
                 <div class="description copy animated fadeIn delay-750">
 
@@ -116,11 +116,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
                 </div>
 
-                <div class="btn-holder">
-                    <a href="#" class="btn btn-primary">submit to speak</a>
-                    <div class="gap-20"></div>
-                    <p>Deadline is May 30th</p>
-                </div>
+<!--                <div class="btn-holder">-->
+<!--                    <a href="#" class="btn btn-primary">submit to speak</a>-->
+<!--                    <div class="gap-20"></div>-->
+<!--                    <p>Deadline is May 30th</p>-->
+<!--                </div>-->
             </div>
         </div>
     </section>
