@@ -39,7 +39,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
 </div>
 
 <section>
-    <div class="section bg-blue text-center section-featured animatedParent" id="down">
+    <div class="section bg-blue text-center section-featured animatedParent animateOnce" id="down">
         <div class="container">
             <h2 class="title section-title small-title featured-title animated fadeInDownShort">Latest & Greatest</h2>
             <div class="description animated fadeInUpShort delay-250">
@@ -50,7 +50,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
 </section>
 
 <section>
-    <div class="section text-center section-attend animatedParent">
+    <div class="section text-center section-attend animatedParent animateOnce">
         <div class="container">
             <h2 class="title section-title animated fadeInDownShort"><?php the_field('section_title_attend', 'option'); ?></h2>
             <div class="description animated fadeInUpShort delay-250">
@@ -88,7 +88,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
 </section>
 
 <section>
-    <div class="section text-center section-gallery animatedParent">
+    <div class="section text-center section-gallery animatedParent animateOnce">
         <div id="carousel-gallery" class="carousel slide carousel-gallery" data-ride="carousel">
 
             <!-- Wrapper for slides -->
@@ -145,7 +145,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
 </section>
 
 <section>
-    <div class="section text-center section-conference animatedParent">
+    <div class="section text-center section-conference animatedParent animateOnce">
         <div class="container">
             <h2 class="title section-title animated fadeInDownShort"><?php the_field('section_title_conference', 'option'); ?></h2>
             <h3 class="title section-title-small animated fadeIn delay-250"><?php the_field('section_sub_title_conference', 'option'); ?></h3>
@@ -213,7 +213,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
 </section>
 
 <section>
-    <div class="section text-center section-sponsorship animatedParent">
+    <div class="section text-center section-sponsorship animatedParent animateOnce">
         <div class="container">
             <h2 class="title section-title animated fadeInDownShort"><?php the_field('section_title_sponsor', 'option'); ?></h2>
 
@@ -248,7 +248,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
 
 
 <section>
-    <div class="section text-center section-join animatedParent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">
+    <div class="section text-center section-join animatedParent animateOnce" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg');">
         <div class="container">
             <div class="view-wrapper">
 
@@ -309,7 +309,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
 
 
 <section>
-    <div class="section text-center section-scoop animatedParent">
+    <div class="section text-center section-scoop animatedParent animateOnce">
         <div class="container">
             <h2 class="title section-title animated fadeInDownShort"><?php the_field('subscription_title', 'option');?></h2>
 
@@ -331,18 +331,7 @@ $banner_thumb = $banner_bg ['sizes'][ $banner_size ];
     </div>
 </section>
 
-
-
 <?php get_footer();?>
 
-<script>
-    document.getElementById('links').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-</script>
+
 

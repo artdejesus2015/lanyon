@@ -67,7 +67,8 @@
                 <button type="button" class="navbar-menu-toggle">
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"></a>
+                <a class="navbar-brand light-navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php the_field('light_logo', 'option'); ?>"></a>
+                <a class="navbar-brand dark-navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php the_field('dark_logo', 'option'); ?>"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

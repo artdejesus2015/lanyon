@@ -2,13 +2,20 @@
     <div class="footer">
         <div class="container">
             <ul class="list social-media-list">
-                <li class="icon icon1"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="icon icon2"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="icon icon3"><a href="#"><span class="icon-google-plus"></span></a></li>
-                <li class="icon icon4"><a href="#"><span class="icon-linkedin"></span></a></li>
+
+                <?php
+                $cntr = 1;
+                if( have_rows('social_media', 'option') ):
+                    while ( have_rows('social_media', 'option') ) : the_row();
+                        $media_img = get_sub_field('media_image', 'option');
+                        $media_link = get_sub_field('media_link', 'option'); ?>
+
+                        <li class="icon icon<?php echo $cntr; ?>"><a href="<?php echo $media_link; ?>"><span class="<?php echo $media_img; ?>"></span></a></li>
+
+                <?php $cntr++; endwhile; endif;  ?>
             </ul>
 
-            <p>© 2016 Lanyon Live. All Rights Reserved. Lanyon Live is organized by <a href="#">Lanyon</a></p>
+            <p>© 2016 Lanyon Live. All Rights Reserved. Lanyon Live is organized by <a href="https://www.lanyon.com/">Lanyon</a></p>
         </div>
     </div>
 </footer>

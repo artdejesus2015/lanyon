@@ -31,7 +31,7 @@ class acf_options_page_plugin
 			'menu'			=> __('Lanyon Theme','acf'),
 			'slug' 			=> 'acf-options',
 			'capability'	=> 'edit_posts',
-			'pages' 		=> array('Home Page Content','Sponsor Page Content', 'Footer Section Content'),
+			'pages' 		=> array('Miscellaneous Content', 'Home Page Content','Sponsor Page Content', 'Footer Section Content'),
 		);
 		
 		

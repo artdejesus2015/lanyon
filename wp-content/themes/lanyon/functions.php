@@ -4,7 +4,7 @@ function theme_enqueue_styles() {
 
     // Css Styles
     wp_enqueue_style( 'normalize',  get_stylesheet_directory_uri() . '/css/normalize.min.css' );
-    wp_enqueue_style( 'blueimp-gallery',  get_stylesheet_directory_uri() . '/css/plugin/blueimp-gallery.min.css' );
+    wp_enqueue_style( 'blueimpcss',  get_stylesheet_directory_uri() . '/css/plugin/blueimp-gallery.min.css' );
     wp_enqueue_style( 'component',  get_stylesheet_directory_uri() . '/css/plugin/component.css' );
     wp_enqueue_style( 'animations',  get_stylesheet_directory_uri() . '/css/plugin/animations.css' );
     wp_enqueue_style( 'main',  get_stylesheet_directory_uri() . '/css/main.css' );
@@ -14,7 +14,7 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'modal',  get_stylesheet_directory_uri() . '/js/bootstrap/modal.js' , array( 'jquery' ), '20140616', true);
     wp_enqueue_script( 'carousel',  get_stylesheet_directory_uri() . '/js/bootstrap/carousel.js' , array( 'jquery' ), '20140616', true);
     wp_enqueue_script( 'collapse',  get_stylesheet_directory_uri() . '/js/bootstrap/collapse.js', array( 'jquery' ), '20140616', true );
-    wp_enqueue_script( 'blueimp-gallery',  get_stylesheet_directory_uri() . '/js/plugin/blueimp-gallery.min.js', array( 'jquery' ), '20140616', true );
+    wp_enqueue_script( 'blueimpjs',  get_stylesheet_directory_uri() . '/js/plugin/blueimp-gallery.min.js', array( 'jquery' ), '20140616', true );
     wp_enqueue_script( 'css3-animate-it',  get_stylesheet_directory_uri() . '/js/plugin/css3-animate-it.js' , array( 'jquery' ), '20140616', true);
     wp_enqueue_script( 'main',  get_stylesheet_directory_uri() . '/js/main.js' , array( 'jquery' ), '20140616', true);
 
