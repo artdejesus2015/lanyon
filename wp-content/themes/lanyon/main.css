@@ -8111,7 +8111,7 @@ ul li a {
 .IEbrowser .banner .banner-caption {
   max-width: none;
 }
-.lt-ie9 .banner--registration .banner-caption {
+.lt-ie9 .banner .banner-caption {
   top: 20%;
 }
 .lt-ie9 .banner-home .banner-caption {
@@ -8992,7 +8992,6 @@ ul li a {
   font-size: 36px;
   color: #fff;
   line-height: 1.5;
-  margin-bottom: 0;
 }
 .banner-sub .banner-title {
   font-size: 244px;

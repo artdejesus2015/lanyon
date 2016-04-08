@@ -4,6 +4,7 @@
 
 .section-featured {
   position: relative;
+  overflow: hidden;
 
   &:after {
     content: '';
@@ -36,6 +37,11 @@
         }
        }
     }
+  }
+
+  .featured-title {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -109,6 +115,9 @@
 }
 
 .section-conference {
+  position: relative;
+  z-index: 1;
+
   .section-title {
     margin-bottom: 10px;
   }
