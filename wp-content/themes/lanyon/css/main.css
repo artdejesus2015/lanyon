@@ -8112,7 +8112,7 @@ ul li a {
   max-width: none;
 }
 .lt-ie9 .banner--registration .banner-caption {
-  top: 20%;
+  top: 30%;
 }
 .lt-ie9 .banner-home .banner-caption {
   top: 10%;
@@ -8138,6 +8138,9 @@ ul li a {
 }
 .lt-ie9 .section-join .description p {
   margin-bottom: 0;
+}
+.lt-ie9 .container {
+  width: 1170px;
 }
 .general-list ul li .general-list-holder {
   padding: 1em 3em;
@@ -8987,6 +8990,9 @@ ul li a {
 }
 .banner-sub .banner-caption {
   z-index: 1;
+}
+.banner-sub .banner-caption .description {
+  margin-bottom: 0;
 }
 .banner-sub .banner-caption .description p {
   font-size: 36px;
